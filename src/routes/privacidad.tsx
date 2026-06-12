@@ -21,7 +21,7 @@ export const Route = createFileRoute("/privacidad")({
           <h3 className="font-display text-2xl text-navy">Uso de la información</h3>
           <p>Utilizamos sus datos exclusivamente para responder consultas, gestionar reservas y enviar información relevante sobre nuestros servicios.</p>
           <h3 className="font-display text-2xl text-navy">Contacto</h3>
-          <p>Para ejercer sus derechos o realizar consultas escríbanos a contacto@genesispropiedades.uy.</p>
+          <p>Para ejercer sus derechos o realizar consultas escríbanos a sofialquila@gmail.com.</p>
         </div>
       </div>
     </section>
