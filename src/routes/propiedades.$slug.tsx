@@ -34,8 +34,8 @@ export const Route = createFileRoute("/propiedades/$slug")({
 });
 
 function Page() {
-  const { property: p } = Route.useLoaderData();
-  const [active, setActive] = useState(p.gallery[0]);
+  const { property: p } = Route.useLoaderData() as { property: import("@/data/properties").Property };
+  const [active, setActive] = useState<string>(p.gallery[0]);
   const others = properties.filter((x) => x.slug !== p.slug).slice(0, 3);
 
   return (

@@ -9,38 +9,168 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SobreNosotrosRouteImport } from './routes/sobre-nosotros'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as ConciergeRouteImport } from './routes/concierge'
+import { Route as AdministracionAirbnbRouteImport } from './routes/administracion-airbnb'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PropiedadesIndexRouteImport } from './routes/propiedades.index'
+import { Route as PropiedadesSlugRouteImport } from './routes/propiedades.$slug'
 
+const SobreNosotrosRoute = SobreNosotrosRouteImport.update({
+  id: '/sobre-nosotros',
+  path: '/sobre-nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConciergeRoute = ConciergeRouteImport.update({
+  id: '/concierge',
+  path: '/concierge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdministracionAirbnbRoute = AdministracionAirbnbRouteImport.update({
+  id: '/administracion-airbnb',
+  path: '/administracion-airbnb',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PropiedadesIndexRoute = PropiedadesIndexRouteImport.update({
+  id: '/propiedades/',
+  path: '/propiedades/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PropiedadesSlugRoute = PropiedadesSlugRouteImport.update({
+  id: '/propiedades/$slug',
+  path: '/propiedades/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/administracion-airbnb': typeof AdministracionAirbnbRoute
+  '/concierge': typeof ConciergeRoute
+  '/contacto': typeof ContactoRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/propiedades/$slug': typeof PropiedadesSlugRoute
+  '/propiedades/': typeof PropiedadesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/administracion-airbnb': typeof AdministracionAirbnbRoute
+  '/concierge': typeof ConciergeRoute
+  '/contacto': typeof ContactoRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/propiedades/$slug': typeof PropiedadesSlugRoute
+  '/propiedades': typeof PropiedadesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/administracion-airbnb': typeof AdministracionAirbnbRoute
+  '/concierge': typeof ConciergeRoute
+  '/contacto': typeof ContactoRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/propiedades/$slug': typeof PropiedadesSlugRoute
+  '/propiedades/': typeof PropiedadesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/administracion-airbnb'
+    | '/concierge'
+    | '/contacto'
+    | '/privacidad'
+    | '/sobre-nosotros'
+    | '/propiedades/$slug'
+    | '/propiedades/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/administracion-airbnb'
+    | '/concierge'
+    | '/contacto'
+    | '/privacidad'
+    | '/sobre-nosotros'
+    | '/propiedades/$slug'
+    | '/propiedades'
+  id:
+    | '__root__'
+    | '/'
+    | '/administracion-airbnb'
+    | '/concierge'
+    | '/contacto'
+    | '/privacidad'
+    | '/sobre-nosotros'
+    | '/propiedades/$slug'
+    | '/propiedades/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdministracionAirbnbRoute: typeof AdministracionAirbnbRoute
+  ConciergeRoute: typeof ConciergeRoute
+  ContactoRoute: typeof ContactoRoute
+  PrivacidadRoute: typeof PrivacidadRoute
+  SobreNosotrosRoute: typeof SobreNosotrosRoute
+  PropiedadesSlugRoute: typeof PropiedadesSlugRoute
+  PropiedadesIndexRoute: typeof PropiedadesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sobre-nosotros': {
+      id: '/sobre-nosotros'
+      path: '/sobre-nosotros'
+      fullPath: '/sobre-nosotros'
+      preLoaderRoute: typeof SobreNosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concierge': {
+      id: '/concierge'
+      path: '/concierge'
+      fullPath: '/concierge'
+      preLoaderRoute: typeof ConciergeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/administracion-airbnb': {
+      id: '/administracion-airbnb'
+      path: '/administracion-airbnb'
+      fullPath: '/administracion-airbnb'
+      preLoaderRoute: typeof AdministracionAirbnbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +178,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/propiedades/': {
+      id: '/propiedades/'
+      path: '/propiedades'
+      fullPath: '/propiedades/'
+      preLoaderRoute: typeof PropiedadesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/propiedades/$slug': {
+      id: '/propiedades/$slug'
+      path: '/propiedades/$slug'
+      fullPath: '/propiedades/$slug'
+      preLoaderRoute: typeof PropiedadesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdministracionAirbnbRoute: AdministracionAirbnbRoute,
+  ConciergeRoute: ConciergeRoute,
+  ContactoRoute: ContactoRoute,
+  PrivacidadRoute: PrivacidadRoute,
+  SobreNosotrosRoute: SobreNosotrosRoute,
+  PropiedadesSlugRoute: PropiedadesSlugRoute,
+  PropiedadesIndexRoute: PropiedadesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
