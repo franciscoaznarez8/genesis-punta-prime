@@ -46,7 +46,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-white/75">
             <li>Punta del Este, Uruguay</li>
             <li><a href={`mailto:${SITE.email}`} className="hover:text-gold">{SITE.email}</a></li>
-            <li><a href={waLink()} target="_blank" rel="noreferrer" className="hover:text-gold">WhatsApp +598 99 123 456</a></li>
+            <li><a href={waLink()} target="_blank" rel="noreferrer" className="hover:text-gold">WhatsApp +598 99 601 819</a></li>
           </ul>
         </div>
       </div>

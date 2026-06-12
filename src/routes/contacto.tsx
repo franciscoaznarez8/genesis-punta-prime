@@ -47,7 +47,7 @@ function Page() {
               <MessageCircle className="h-6 w-6 text-gold mt-1" />
               <div>
                 <div className="eyebrow">WhatsApp</div>
-                <div className="mt-1 font-display text-xl text-navy">+598 99 123 456</div>
+                <div className="mt-1 font-display text-xl text-navy">+598 99 601 819</div>
               </div>
             </a>
             <a href={`mailto:${SITE.email}`} className="flex items-start gap-4 p-6 border border-border hover:border-gold transition-colors bg-card">
