@@ -131,9 +131,18 @@ function Home() {
             <p className="mt-6 text-white/80 max-w-xl leading-relaxed">
               Te ayudamos a generar ingresos sin ocuparte de la operación diaria. Nos encargamos de todo: huéspedes, mantenimiento, limpieza y reportes claros.
             </p>
-            <ul className="mt-10 grid sm:grid-cols-2 gap-y-4 gap-x-8 text-sm">
-              {["Más reservas","Mejor experiencia para huéspedes","Mantenimiento constante","Gestión integral y transparente"].map((b) => (
-                <li key={b} className="flex items-center gap-3"><Sparkles className="h-4 w-4 text-gold" /> {b}</li>
+            <ul className="mt-10 grid sm:grid-cols-2 gap-y-3 gap-x-8 text-sm">
+              {[
+                "Publicación en Airbnb",
+                "Gestión de reservas",
+                "Check-in y check-out",
+                "Limpieza",
+                "Mantenimiento",
+                "Jardinería",
+                "Piscinas",
+                "Atención al huésped",
+              ].map((b) => (
+                <li key={b} className="flex items-center gap-3 border-b border-white/10 pb-3"><Sparkles className="h-4 w-4 text-gold shrink-0" /> {b}</li>
               ))}
             </ul>
           </div>
