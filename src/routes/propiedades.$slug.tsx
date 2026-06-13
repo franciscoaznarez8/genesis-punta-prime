@@ -16,7 +16,7 @@ export const Route = createFileRoute("/propiedades/$slug")({
       { name: "description", content: loaderData.property.description },
       { property: "og:title", content: loaderData.property.name },
       { property: "og:description", content: loaderData.property.description },
-      { property: "og:image", content: loaderData.property.image },
+      { property: "og:image", content: loaderData.property.gallery[0] },
     ] : [],
   }),
   notFoundComponent: () => (
