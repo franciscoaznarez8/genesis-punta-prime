@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MessageCircle, Sparkles, ShieldCheck, KeyRound, Heart} from "lucide-react";
+import { ArrowRight, MessageCircle, Sparkles, ShieldCheck, KeyRound, Heart, Star } from "lucide-react";
 import hero from "@/assets/hero-punta-este.jpg";
 import about from "@/assets/about-punta.jpg";
 import { properties } from "@/data/properties";
