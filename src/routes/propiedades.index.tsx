@@ -4,7 +4,6 @@ import { properties } from "@/data/properties";
 import { PropertyCard } from "@/components/site/PropertyCard";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { waLink } from "@/lib/site";
-import { SectionTitle } from "@/components/site/SectionTitle";
 
 export const Route = createFileRoute("/propiedades/")({
   head: () => ({
