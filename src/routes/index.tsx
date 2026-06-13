@@ -40,8 +40,8 @@ function Home() {
             Gestionamos propiedades, cuidamos cada detalle y brindamos experiencias excepcionales a propietarios y huéspedes.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "300ms" }}>
-            <Link to="/propiedades" className="btn-gold">Ver propiedades <ArrowRight className="h-4 w-4" /></Link>
-            <a href={waLink()} target="_blank" rel="noreferrer" className="btn-outline-light"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
+            <a href={waLink("Hola, quiero que administren mi propiedad.")} target="_blank" rel="noreferrer" className="btn-gold">Quiero que administren mi propiedad <ArrowRight className="h-4 w-4" /></a>
+            <Link to="/propiedades" className="btn-outline-light">Ver propiedades</Link>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-[0.65rem] uppercase tracking-[0.4em]">
@@ -131,9 +131,18 @@ function Home() {
             <p className="mt-6 text-white/80 max-w-xl leading-relaxed">
               Te ayudamos a generar ingresos sin ocuparte de la operación diaria. Nos encargamos de todo: huéspedes, mantenimiento, limpieza y reportes claros.
             </p>
-            <ul className="mt-10 grid sm:grid-cols-2 gap-y-4 gap-x-8 text-sm">
-              {["Más reservas","Mejor experiencia para huéspedes","Mantenimiento constante","Gestión integral y transparente"].map((b) => (
-                <li key={b} className="flex items-center gap-3"><Sparkles className="h-4 w-4 text-gold" /> {b}</li>
+            <ul className="mt-10 grid sm:grid-cols-2 gap-y-3 gap-x-8 text-sm">
+              {[
+                "Publicación en Airbnb",
+                "Gestión de reservas",
+                "Check-in y check-out",
+                "Limpieza",
+                "Mantenimiento",
+                "Jardinería",
+                "Piscinas",
+                "Atención al huésped",
+              ].map((b) => (
+                <li key={b} className="flex items-center gap-3 border-b border-white/10 pb-3"><Sparkles className="h-4 w-4 text-gold shrink-0" /> {b}</li>
               ))}
             </ul>
           </div>
@@ -156,28 +165,6 @@ function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIOS */}
-      <section className="py-24 md:py-32 bg-sand/40">
-        <div className="container-luxe">
-          <SectionTitle eyebrow="Testimonios" title="Confianza construida día a día" />
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {[
-              { name: "Martina G.", role: "Propietaria, La Barra", text: "Confié mi casa en La Barra y nunca tuve que preocuparme por nada. Reportes claros y reservas todo el verano." },
-              { name: "Juan & Sofía", role: "Huéspedes, Brasil", text: "La atención fue impecable de principio a fin. La casa lucía exactamente como en las fotos." },
-              { name: "Rodrigo P.", role: "Propietario, José Ignacio", text: "Profesionales, transparentes y con un cuidado obsesivo por el detalle. Recomiendo Génesis sin dudar." },
-            ].map((t) => (
-              <figure key={t.name} className="bg-background p-8 border border-border">
-                <div className="flex gap-1 text-gold">{Array.from({length:5}).map((_,i)=><Star key={i} className="h-4 w-4 fill-current"/>)}</div>
-                <blockquote className="mt-5 font-display text-xl leading-snug text-navy">"{t.text}"</blockquote>
-                <figcaption className="mt-6 text-sm">
-                  <div className="font-semibold text-navy">{t.name}</div>
-                  <div className="text-muted-foreground">{t.role}</div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }
