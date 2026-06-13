@@ -86,6 +86,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Génesis Propiedades" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Génesis Propiedades — Inmobiliaria y Administración en Punta del Este" },
+      { name: "twitter:title", content: "Génesis Propiedades — Inmobiliaria y Administración en Punta del Este" },
+      { property: "og:description", content: "Alquileres temporarios premium y administración integral de propiedades en Punta del Este, Uruguay. Atención personalizada y experiencias excepcionales." },
+      { name: "twitter:description", content: "Alquileres temporarios premium y administración integral de propiedades en Punta del Este, Uruguay. Atención personalizada y experiencias excepcionales." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0955dc62-12ef-40fd-b039-a446b1b71d3b/id-preview-fa18c301--08eb7d12-d016-4526-8b14-b90db0e651da.lovable.app-1781362300130.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0955dc62-12ef-40fd-b039-a446b1b71d3b/id-preview-fa18c301--08eb7d12-d016-4526-8b14-b90db0e651da.lovable.app-1781362300130.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
