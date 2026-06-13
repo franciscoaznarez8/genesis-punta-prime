@@ -127,7 +127,7 @@ function Page() {
             {others.map((o) => (
               <Link key={o.slug} to="/propiedades/$slug" params={{ slug: o.slug }} className="group block">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={o.image} alt={o.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={800} height={600} loading="lazy" />
+                  <img src={o.gallery[0]} alt={o.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={800} height={600} loading="lazy" />
                 </div>
                 <h3 className="mt-4 font-display text-xl text-navy">{o.name}</h3>
                 <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{o.zone}</p>
