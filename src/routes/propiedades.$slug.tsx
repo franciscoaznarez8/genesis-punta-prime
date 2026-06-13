@@ -116,6 +116,11 @@ function Page() {
               <button className="btn-navy w-full">Enviar consulta</button>
             </form>
             <a href={waLink(`Hola, me interesa ${p.name}.`)} target="_blank" rel="noreferrer" className="mt-3 btn-gold w-full"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
+            {p.airbnbUrl && (
+              <a href={p.airbnbUrl} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center justify-center gap-2 w-full border border-navy text-navy px-4 py-3 text-sm uppercase tracking-[0.18em] hover:bg-navy hover:text-white transition">
+                Ver en Airbnb
+              </a>
+            )}
           </aside>
         </div>
       </section>
