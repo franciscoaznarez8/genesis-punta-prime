@@ -165,28 +165,6 @@ function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIOS */}
-      <section className="py-24 md:py-32 bg-sand/40">
-        <div className="container-luxe">
-          <SectionTitle eyebrow="Testimonios" title="Confianza construida día a día" />
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {[
-              { name: "Martina G.", role: "Propietaria, La Barra", text: "Confié mi casa en La Barra y nunca tuve que preocuparme por nada. Reportes claros y reservas todo el verano." },
-              { name: "Juan & Sofía", role: "Huéspedes, Brasil", text: "La atención fue impecable de principio a fin. La casa lucía exactamente como en las fotos." },
-              { name: "Rodrigo P.", role: "Propietario, José Ignacio", text: "Profesionales, transparentes y con un cuidado obsesivo por el detalle. Recomiendo Génesis sin dudar." },
-            ].map((t) => (
-              <figure key={t.name} className="bg-background p-8 border border-border">
-                <div className="flex gap-1 text-gold">{Array.from({length:5}).map((_,i)=><Star key={i} className="h-4 w-4 fill-current"/>)}</div>
-                <blockquote className="mt-5 font-display text-xl leading-snug text-navy">"{t.text}"</blockquote>
-                <figcaption className="mt-6 text-sm">
-                  <div className="font-semibold text-navy">{t.name}</div>
-                  <div className="text-muted-foreground">{t.role}</div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }
