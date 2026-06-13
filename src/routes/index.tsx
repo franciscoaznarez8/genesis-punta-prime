@@ -53,12 +53,22 @@ function Home() {
       <section className="py-24 md:py-32 bg-background">
         <div className="container-luxe">
           <SectionTitle eyebrow="Propiedades destacadas" title="Selección curada" subtitle="Una colección de residencias y apartamentos premium, elegidos por su ubicación, diseño y experiencia." />
-          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {featured.map((p) => <PropertyCard key={p.slug} p={p} />)}
-          </div>
-          <div className="mt-14 text-center">
-            <Link to="/propiedades" className="btn-navy">Ver todas las propiedades</Link>
-          </div>
+          {featured.length > 0 ? (
+            <>
+              <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {featured.map((p) => <PropertyCard key={p.slug} p={p} />)}
+              </div>
+              <div className="mt-14 text-center">
+                <Link to="/propiedades" className="btn-navy">Ver todas las propiedades</Link>
+              </div>
+            </>
+          ) : (
+            <div className="mt-16 border border-dashed border-border bg-card p-12 text-center">
+              <p className="font-display text-2xl text-navy">Próximamente</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-md mx-auto">Estamos preparando la publicación de nuestras propiedades. Contactanos por WhatsApp para conocer la disponibilidad actual.</p>
+              <a href={waLink()} target="_blank" rel="noreferrer" className="mt-6 inline-flex btn-gold"><MessageCircle className="h-4 w-4" /> Consultar disponibilidad</a>
+            </div>
+          )}
         </div>
       </section>
 
