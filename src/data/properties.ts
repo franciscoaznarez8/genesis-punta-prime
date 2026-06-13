@@ -1,92 +1,321 @@
-// ============================================================
-// Propiedades reales administradas por Génesis Propiedades
-// ------------------------------------------------------------
-// Para agregar una nueva propiedad, copiá el bloque de ejemplo
-// que está al final del archivo (comentado) dentro del array
-// `properties` y completá los campos.
-//
-// Imágenes: subir los archivos a `src/assets/` y luego importarlos
-// arriba (ej: `import villa1 from "@/assets/villa-las-rosas-1.jpg"`).
-// La primera imagen del array `gallery` se usa como portada.
-// ============================================================
-
 export type Property = {
-  slug: string;            // identificador en la URL (sin espacios, en minúsculas)
-  name: string;            // nombre real de la propiedad
-  zone: string;            // zona (ej: "La Barra", "José Ignacio")
-  guests: number;          // capacidad máxima de huéspedes
-  bedrooms: number;        // dormitorios
-  bathrooms: number;       // baños
-  gallery: string[];       // galería de fotos (la primera es la portada)
-  description: string;     // descripción larga
-  features: string[];      // características destacadas
-  services: string[];      // servicios incluidos
-  location: string;        // ubicación detallada
-  airbnbUrl?: string;      // link a la publicación en Airbnb (opcional)
+  slug: string;
+  name: string;
+  zone: string;
+  guests: number;
+  bedrooms: number;
+  bathrooms: number;
+  image: string;
+  gallery: string[];
+  description: string;
+  features: string[];
+  services: string[];
+  location: string;
+  rating?: number;
+  reviews?: number;
+  whatsappMsg?: string;
+  airbnbUrl?: string;
 };
 
-// Cuando tengas las propiedades reales, agregalas a este array.
 export const properties: Property[] = [
+  // ── BATCH 1 ─────────────────────────────────────────────
   {
     slug: "paradiso-pueblo-mio",
-    name: '"Paradiso" Pueblo Mío',
+    name: "PARADISO — Pueblo Mío",
     zone: "Manantiales",
     guests: 12,
     bedrooms: 6,
     bathrooms: 5,
-    gallery: [
-      "https://a0.muscache.com/im/pictures/hosting/Hosting-37682421/original/d02fe848-57d3-40bb-8dcf-8fd1021208dc.jpeg?im_w=1200",
-      "https://a0.muscache.com/im/pictures/4909a442-7637-4ef5-90c1-d3fcbce938aa.jpg?im_w=1200",
-      "https://a0.muscache.com/im/pictures/485607a8-17ba-4002-95b2-2fafb9073215.jpg?im_w=1200",
-      "https://a0.muscache.com/im/pictures/ff6dc18f-d359-4b35-a3fc-f829ba2db631.jpg?im_w=1200",
-      "https://a0.muscache.com/im/pictures/592cf158-31d4-4a2a-9f5d-e26501c9591d.jpg?im_w=1200",
-      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mzc2ODI0MjE%3D/original/f6e03cda-ce8e-47e9-9b35-15b125f4a139.jpeg?im_w=1200",
-      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mzc2ODI0MjE%3D/original/c9e2d8a6-79ba-4868-b55d-dae91b9ceb97.jpeg?im_w=1200",
-      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mzc2ODI0MjE%3D/original/9309ec0e-c741-41b7-91a2-de1c63816695.jpeg?im_w=1200",
-    ],
-    description:
-      "Casa única a estrenar en el barrio privado Pueblo Mío, Manantiales. Diseño contemporáneo que dialoga con la naturaleza a través de grandes ventanales, madera y piedra del lugar. Ubicada entre campo y playa, ofrece la tranquilidad perfecta para descansar y disfrutar con amigos o familia. Favorito entre los huéspedes en Airbnb (5,0 ★).",
-    features: [
-      "Piscina exclusiva",
-      "Barrio privado Pueblo Mío",
-      "Entre campo y playa",
-      "6 dormitorios · 10 camas",
-      "5,5 baños",
-      "Sauna",
-      "Grandes ventanales con vistas",
-      "Diseño en madera y piedra",
-    ],
-    services: [
-      "Llegada autónoma con caja de seguridad",
-      "Limpieza incluida",
-      "Atención personalizada del anfitrión",
-      "Check-in y check-out coordinados",
-    ],
-    location: "Barrio privado Pueblo Mío — Manantiales, Maldonado",
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-37682421/original/d02fe848-57d3-40bb-8dcf-8fd1021208dc.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-37682421/original/d02fe848-57d3-40bb-8dcf-8fd1021208dc.jpeg?im_w=720","https://a0.muscache.com/im/pictures/4909a442-7637-4ef5-90c1-d3fcbce938aa.jpg?im_w=720","https://a0.muscache.com/im/pictures/485607a8-17ba-4002-95b2-2fafb9073215.jpg?im_w=720","https://a0.muscache.com/im/pictures/ff6dc18f-d359-4b35-a3fc-f829ba2db631.jpg?im_w=720","https://a0.muscache.com/im/pictures/592cf158-31d4-4a2a-9f5d-e26501c9591d.jpg?im_w=720"],
+    description: "Casa ÚNICA a estrenar en barrio privado Pueblo Mío, Manantiales. Entre campo y playa, la tranquilidad perfecta para tus vacaciones. Ventanales, madera y piedra del lugar. Excelente para descansar y disfrutar con amigos y familia.",
+    features: ["Piscina exclusiva","Acceso al lago","Estacionamiento gratuito","Wifi","Cocina completa","Parrilla","Llegada autónoma"],
+    services: ["Check-in: 15:00–21:00","Check-out antes de 11:00"],
+    location: "Pueblo Mío, Manantiales — Maldonado",
+    rating: 5.0, reviews: 17,
+    whatsappMsg: "Hola, me interesa la propiedad PARADISO en Pueblo Mío, Manantiales.",
     airbnbUrl: "https://es-l.airbnb.com/rooms/37682421",
+  },
+  {
+    slug: "casa-divina-pueblo-mio",
+    name: "Casa Divina 4 dorm — Pueblo Mío",
+    zone: "Manantiales",
+    guests: 8, bedrooms: 4, bathrooms: 5,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1650988006759702876/original/c5b8a74c-e3ac-4506-b2e6-11effc80f737.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1650988006759702876/original/c5b8a74c-e3ac-4506-b2e6-11effc80f737.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1650988006759702876/original/22e18717-f5c0-48da-b255-192e4c2da8bd.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1650988006759702876/original/a2869f7c-6f17-4728-9315-b53d29adc52d.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1650988006759702876/original/e7d24d2b-dc50-46a4-9a84-1ac0d80ab3ea.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1650988006759702876/original/74ca9e17-3581-41fe-9202-16e001270f72.jpeg?im_w=720"],
+    description: "Casa con estilo en barrio privado Pueblo Mío. Vistas al lago, piscina y 4 dormitorios en suite. Comodidad y tranquilidad para toda la familia.",
+    features: ["Piscina","Vistas al lago","4 dorm. en suite","Cocina","Wifi","Estacionamiento gratuito"],
+    services: ["Check-in desde 15:00","Check-out antes de 11:00"],
+    location: "Pueblo Mío, Manantiales — Maldonado",
+    whatsappMsg: "Hola, me interesa la Casa Divina 4 dorm en Pueblo Mío.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1650988006759702876",
+  },
+  {
+    slug: "casa-jose-ignacio",
+    name: "Casa en José Ignacio",
+    zone: "José Ignacio",
+    guests: 8, bedrooms: 3, bathrooms: 3,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1034967059435026539/original/51780993-906d-487e-8e27-7ac2e7386893.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1034967059435026539/original/51780993-906d-487e-8e27-7ac2e7386893.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1034967059435026539/original/b95ac790-3b88-4e15-b0f7-ab106b84ff8f.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1034967059435026539/original/4946a304-afe4-4f9d-bf8d-aa8159aaeb8a.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1034967059435026539/original/f1ad5a3d-1583-4d0d-93c9-dd7c630466bf.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1034967059435026539/original/373d70ca-fe72-46ff-9f0e-63b8425523dd.jpeg?im_w=720"],
+    description: "Casa a estrenar divina, muy bien ubicada. A 2 cuadras del Parador La Huella y a 3 cuadras de Playa Sur. Ideal para familias.",
+    features: ["Acceso a la playa","Estacionamiento gratuito","Cocina","Wifi","Zona de trabajo"],
+    services: ["Check-in desde 15:00","Check-out antes de 11:00"],
+    location: "Faro de José Ignacio — Maldonado",
+    rating: 4.77, reviews: 13,
+    whatsappMsg: "Hola, me interesa la Casa en José Ignacio cerca de La Huella.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1034967059435026539",
+  },
+  {
+    slug: "abadejo-house",
+    name: "Abadejo House",
+    zone: "La Barra",
+    guests: 11, bedrooms: 5, bathrooms: 5,
+    image: "https://a0.muscache.com/im/pictures/miso/Hosting-4525348/original/a980e24f-0f65-44cc-9c76-ed643868b072.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/miso/Hosting-4525348/original/a980e24f-0f65-44cc-9c76-ed643868b072.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-4525348/original/8e344a66-043f-48e3-8097-8aba38f2eb7e.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-4525348/original/d60efc55-d49f-4259-9116-3935585e76b0.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-4525348/original/7b755654-852a-427a-814f-c0d0cf8cf2fe.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-4525348/original/c945dc22-b0de-44f6-9693-3c1fc521ddd9.jpeg?im_w=720"],
+    description: "A pocos metros de la playa, con espléndidas vistas al mar, jardín, terraza e infinite pool. Arquitectura vanguardista diseñada por Diego Algorta Carrau. A 500m del pueblito gastronómico de Manantiales.",
+    features: ["Piscina infinity","Jacuzzi","Vista al mar","Acceso a la playa","Estacionamiento gratuito","Cocina","Wifi","Parrilla"],
+    services: ["Servicio de mucama opcional (+30 USD/día)","Check-in 15:00–20:00","Check-out antes de 11:00"],
+    location: "El Chorro, La Barra — Maldonado",
+    rating: 4.88, reviews: 106,
+    whatsappMsg: "Hola, me interesa Abadejo House en La Barra.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/4525348",
+  },
+  {
+    slug: "casa-5dorm-pueblo-mio",
+    name: "Casa 5 dorm — Pueblo Mío",
+    zone: "Manantiales",
+    guests: 14, bedrooms: 6, bathrooms: 7,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1110330638772649350/original/63ada327-e509-4172-a5dd-98aa66ac9e2b.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1110330638772649350/original/63ada327-e509-4172-a5dd-98aa66ac9e2b.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1110330638772649350/original/efacad1b-11dc-4f8b-bbdf-7e451051d1a0.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1110330638772649350/original/ee4cea5a-aa87-4c20-9b6a-00c3d221e10f.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1110330638772649350/original/247aae12-8ccc-45ba-a2db-567e9bf02adf.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1110330638772649350/original/8f10574d-1536-4e97-9a9f-2a8e565c174b.jpeg?im_w=720"],
+    description: "Casa espectacular con 5 dormitorios más dependencia de servicio. Piscina con solarium y vistas al lago. Barrio privado Pueblo Mío con cancha de fútbol, padel, tenis y piscinas climatizadas. A 5 minutos de La Barra.",
+    features: ["Piscina + solarium","Vistas al lago","Cancha de padel/tenis/fútbol (barrio)","Piscinas climatizadas (barrio)","Cocina","Wifi","Estacionamiento gratuito"],
+    services: ["Check-in desde 15:00","Check-out antes de 11:00","Seguridad 24hs en barrio"],
+    location: "Pueblo Mío, Manantiales — Maldonado",
+    rating: 5.0, reviews: 11,
+    whatsappMsg: "Hola, me interesa la Casa 5 dorm con piscina en Pueblo Mío.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1110330638772649350",
+  },
+  {
+    slug: "casa-mar-laguna-jose-ignacio",
+    name: "Casa entre mar y laguna",
+    zone: "José Ignacio",
+    guests: 6, bedrooms: 3, bathrooms: 3,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1505883429779658876/original/cc37fdad-7e48-4721-9c5b-df1acd161c5b.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1505883429779658876/original/cc37fdad-7e48-4721-9c5b-df1acd161c5b.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1505883429779658876/original/572cd952-5e2a-4d9b-897c-ffdf43695171.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1505883429779658876/original/b3c65cf4-276c-4c1d-9520-2d76ab8cb93c.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1505883429779658876/original/d9c75180-1f1b-47cc-812f-9bd8569628f6.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1505883429779658876/original/59ed576c-dddb-4c45-8a31-f8bf57d47528.jpeg?im_w=720"],
+    description: "Casa exclusiva en primera línea frente al mar con vistas a la Laguna José Ignacio. Terraza con piscina elevada. Muy acogedora e ideal para familia.",
+    features: ["Piscina elevada","Vista al mar","Vista a la laguna","Acceso a la playa","Estacionamiento gratuito","Cocina","Wifi"],
+    services: ["Check-in desde 15:00"],
+    location: "Santa Mónica, José Ignacio — Maldonado",
+    rating: 5.0, reviews: 1,
+    whatsappMsg: "Hola, me interesa la Casa entre mar y laguna en José Ignacio.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1505883429779658876",
+  },
+  {
+    slug: "penthouse-playa-brava",
+    name: "Penthouse Playa Brava",
+    zone: "Playa Brava",
+    guests: 10, bedrooms: 5, bathrooms: 4,
+    image: "https://a0.muscache.com/im/pictures/miso/Hosting-1081053699370637668/original/11ab4c51-8f1e-4072-90bd-34fbb61b1669.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/miso/Hosting-1081053699370637668/original/11ab4c51-8f1e-4072-90bd-34fbb61b1669.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1081053699370637668/original/70db6946-4e91-4874-9cec-18b4aef160f5.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1081053699370637668/original/9deafcd9-cf53-4b0d-988d-9ed946f51b66.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1081053699370637668/original/4a3c3ea0-044f-4cc1-a791-75e2ac11b7c1.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1081053699370637668/original/7b222934-49fd-430d-985d-f68b6d8005b7.jpeg?im_w=720"],
+    description: "Penthouse espectacular frente al mar en Playa Brava. Vista panorámica al mar desde todos lados. Terraza con parrilla propia en última planta. Piscina en el edificio.",
+    features: ["Vista al mar panorámica","Terraza con parrilla propia","Piscina del edificio","Acceso a la playa","Estacionamiento gratuito","Cocina","Wifi"],
+    services: ["Check-in desde 15:00","Check-out antes de 11:00","Servicio de mucama del edificio"],
+    location: "Playa Brava — Punta del Este",
+    rating: 5.0, reviews: 1,
+    whatsappMsg: "Hola, me interesa el Penthouse Espectacular en Playa Brava.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1081053699370637668",
+  },
+  {
+    slug: "las-brisas-la-barra",
+    name: "Las Brisas — La Barra",
+    zone: "La Barra",
+    guests: 11, bedrooms: 5, bathrooms: 5,
+    image: "https://a0.muscache.com/im/pictures/68929195/29581808_original.jpg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/68929195/29581808_original.jpg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-4548643/original/786d4c63-1055-43c3-8ba1-d75aeba05e39.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-4548643/original/244f19cc-7f44-4ee9-b4bd-cd00c945fe2e.jpeg?im_w=720","https://a0.muscache.com/im/pictures/68929780/33ea512d_original.jpg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-4548643/original/910388a7-7de0-4961-bb0f-eb767ab1138e.jpeg?im_w=720"],
+    description: "A 2 cuadras del centro gastronómico de La Barra y a 3 cuadras de Playa Montoya. Nuevo jacuzzi para 7 personas y 50m² de deck con reposeras. Ubicación perfecta.",
+    features: ["Jacuzzi para 7 personas","Deck 50m²","Wifi","Zona de trabajo","Estacionamiento gratuito","Cocina"],
+    services: ["Servicio de mucama opcional","Check-in 15:00–20:00","Check-out antes de 12:00"],
+    location: "La Barra — Maldonado",
+    rating: 4.87, reviews: 62,
+    whatsappMsg: "Hola, me interesa Las Brisas en La Barra.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/4548643",
+  },
+  {
+    slug: "casa-4dorm-pueblo-mio",
+    name: "Casa 4 dorm — Pueblo Mío",
+    zone: "Manantiales",
+    guests: 8, bedrooms: 4, bathrooms: 4,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1209460576563165500/original/91e13997-1d79-4ecc-96ca-ae5b43e95ac9.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1209460576563165500/original/91e13997-1d79-4ecc-96ca-ae5b43e95ac9.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1209460576563165500/original/76454d24-e8c9-44c0-8411-634d5b3e9667.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1209460576563165500/original/386c92ff-2648-4ec8-a398-b592a57e2eff.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1209460576563165500/original/4840a2af-386e-4220-a656-115a35e02767.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1209460576563165500/original/5016bb0e-7208-4821-b1c3-d6a2305dac5d.jpeg?im_w=720"],
+    description: "Casa con piscina y 4 dormitorios en barrio privado Pueblo Mío. Muy cerca de Manantiales y La Barra. Barrio con seguridad 24hs y amenities completos.",
+    features: ["Piscina","4 dormitorios","Estacionamiento gratuito","Cocina","Wifi"],
+    services: ["Check-in desde 15:00","Personal del edificio en check-in"],
+    location: "Pueblo Mío, Manantiales — Maldonado",
+    rating: 5.0, reviews: 2,
+    whatsappMsg: "Hola, me interesa la Casa 4 dorm con piscina en Pueblo Mío.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1209460576563165500",
+  },
+  {
+    slug: "depto-bikini-beach",
+    name: "Dpto. Bikini Beach",
+    zone: "Manantiales",
+    guests: 6, bedrooms: 3, bathrooms: 3,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1500867214218045675/original/bb51dc35-0e59-4ef2-b16b-612f1b3e2e93.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1500867214218045675/original/bb51dc35-0e59-4ef2-b16b-612f1b3e2e93.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1500867214218045675/original/55ae31c3-208d-4735-93fb-863dafe32477.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1500867214218045675/original/5a0b2d82-5170-4bd5-932e-0e3f19f59184.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1500867214218045675/original/d8e2604b-f611-46c5-bde6-92d770dfc32b.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1500867214218045675/original/f2b25822-21ba-4ce5-804e-3d53ec09bfbc.jpeg?im_w=720"],
+    description: "Departamento sobre la Playa Bikini. Disfrutá la playa desde tu casa. Ubicación estratégica para ir caminando a playa, restaurants y mercados. Servicio de playa y mucama.",
+    features: ["Frente al mar","Acceso a la playa","Estacionamiento gratuito","Cocina","Wifi","TV"],
+    services: ["Servicio de playa","Servicio de mucama","Check-in desde 15:00"],
+    location: "Playa Bikini, Manantiales — Maldonado",
+    rating: 4.33, reviews: 3,
+    whatsappMsg: "Hola, me interesa el Departamento frente al mar en Bikini Beach.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1500867214218045675",
+  },
+  // ── BATCH 2 ─────────────────────────────────────────────
+  {
+    slug: "depto-montoya-vista-mar",
+    name: "Dpto. 3 dorm Playa Montoya",
+    zone: "La Barra",
+    guests: 6, bedrooms: 3, bathrooms: 3,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1587831973175122210/original/5c2975b2-2e95-4530-ad59-3a479618d290.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1587831973175122210/original/5c2975b2-2e95-4530-ad59-3a479618d290.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1587831973175122210/original/ca8795cc-1846-4946-adb5-b6e329b88614.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1587831973175122210/original/c674bd91-6e9c-4e1b-ad0f-b62a1a5b69b2.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1587831973175122210/original/1ba29bc8-7a50-4f15-be24-7039335cc8b5.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1587831973175122210/original/f7f80bef-ad4e-4966-b096-9bf2386fcaf8.jpeg?im_w=720"],
+    description: "Departamento 3 dormitorios con vista al mar en Playa Montoya. Céntrico, cerca de todo. Piscina en el edificio y estacionamiento gratuito.",
+    features: ["Vista al mar","Piscina","Estacionamiento gratuito","Cocina","Wifi","TV"],
+    services: ["Check-in desde 15:00"],
+    location: "Playa Montoya, La Barra — Maldonado",
+    whatsappMsg: "Hola, me interesa el Dpto. 3 dorm en Playa Montoya con vista al mar.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1587831973175122210",
+  },
+  {
+    slug: "casa-san-vicente",
+    name: "Casa Espectacular — San Vicente",
+    zone: "San Vicente",
+    guests: 10, bedrooms: 5, bathrooms: 6,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1577125641679511411/original/495c7699-8851-4a59-a329-edb097a8049c.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1577125641679511411/original/495c7699-8851-4a59-a329-edb097a8049c.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1577125641679511411/original/3c13aafd-4aa1-4741-962b-9839b03e176a.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1577125641679511411/original/1be9208a-ed29-485d-b32b-61e37f0ae81c.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1577125641679511411/original/d0337efb-0da2-49aa-89a8-40675d3a285b.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1577125641679511411/original/d16c208d-de84-4813-9b92-b294d8dcb5de.jpeg?im_w=720"],
+    description: "Casa espectacular a pasos del mar con privacidad absoluta en un entorno agreste y encantador. Espacios amplios y luminosos para compartir momentos inolvidables en familia. Capacidad para 10 personas.",
+    features: ["Piscina","Vista al mar","Acceso a la playa","Estacionamiento gratuito","Cocina","Wifi","Zona de trabajo"],
+    services: ["Check-in desde 15:00","Check-out antes de 11:00"],
+    location: "San Vicente — Maldonado",
+    whatsappMsg: "Hola, me interesa la Casa Espectacular en San Vicente.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1577125641679511411",
+  },
+  {
+    slug: "depto-centrico-punta",
+    name: "Dpto. Céntrico en Punta",
+    zone: "Punta del Este",
+    guests: 4, bedrooms: 2, bathrooms: 2,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1257163471977500844/original/e92c943b-7e31-4364-9277-db1a77ff3eb6.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1257163471977500844/original/e92c943b-7e31-4364-9277-db1a77ff3eb6.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1257163471977500844/original/4778051f-8793-4619-b45d-c1382d071c14.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1257163471977500844/original/7c4d9aa7-718a-4368-bf19-5925c10410f3.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1257163471977500844/original/c198a8bf-63a6-49b8-aa85-ff5a4aade580.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1257163471977500844/original/f80e95dd-6027-483d-b794-5b4a7e2fcc6a.jpeg?im_w=720"],
+    description: "Departamento en plena península, a 2 cuadras del puerto y 2 cuadras de Playa Brava. Cerca de todos los restaurantes y comercios. Terraza amplia con parrillero. Piscina del edificio y garage.",
+    features: ["Piscina del edificio","Terraza con parrillero","1 Garage","Cocina","Wifi","TV","Estacionamiento gratuito"],
+    services: ["Check-in desde 15:00","Check-out antes de 11:00"],
+    location: "Península — Punta del Este",
+    rating: 5.0, reviews: 1,
+    whatsappMsg: "Hola, me interesa el Departamento Céntrico en la Península de Punta del Este.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1257163471977500844",
+  },
+  {
+    slug: "divina-casa-pueblo-mio",
+    name: "Divina Casa — Pueblo Mío",
+    zone: "Manantiales",
+    guests: 8, bedrooms: 4, bathrooms: 4,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1547803099984056694/original/1b4b4395-e052-4e09-b1c6-d54583ad0e51.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1547803099984056694/original/1b4b4395-e052-4e09-b1c6-d54583ad0e51.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1547803099984056694/original/7c779019-2aa6-4af0-97db-d54a279ecc5c.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1547803099984056694/original/b7d404ba-bea0-4ed9-8f55-a26c1a36a856.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1547803099984056694/original/daf8137b-7638-4b45-8129-e530c75ab487.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1547803099984056694/original/ca040ccf-ae50-4b3c-8e2a-96875b29f7a3.jpeg?im_w=720"],
+    description: "Casa divina en Pueblo Mío con piscina y 4 dormitorios. Lugar tranquilo y familiar ideal para relajarse con la familia.",
+    features: ["Piscina","4 dormitorios","Estacionamiento gratuito","Cocina","Wifi","Zona de trabajo"],
+    services: ["Check-in desde 15:00","Check-out antes de 11:00"],
+    location: "Pueblo Mío, Manantiales — Maldonado",
+    rating: 5.0, reviews: 1,
+    whatsappMsg: "Hola, me interesa la Divina Casa en Pueblo Mío, Manantiales.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1547803099984056694",
+  },
+  {
+    slug: "casa-vista-mar-manantiales",
+    name: "Casa Vista al Mar — Manantiales",
+    zone: "Manantiales",
+    guests: 10, bedrooms: 4, bathrooms: 3,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1582676575753376556/original/e2a1d328-0968-4593-af34-ddf07a9d95fb.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1582676575753376556/original/e2a1d328-0968-4593-af34-ddf07a9d95fb.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1582676575753376556/original/4e5154a5-2d8d-4ef9-91a0-901125566ce6.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1582676575753376556/original/c48152bf-5d35-4b07-b682-3533274bbb14.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1582676575753376556/original/2dcd17dc-7ea0-431e-807e-bc83090f6f61.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1582676575753376556/original/e85ab46c-17bd-4fd0-b70a-622256c3a403.jpeg?im_w=720"],
+    description: "Casa 4 dormitorios con vista al mar en Manantiales. A 1 cuadra de la playa y a 2 minutos de Manantiales. Ubicación estratégica para disfrutar todo.",
+    features: ["Vista al mar","A 1 cuadra de la playa","Estacionamiento gratuito","Cocina","Wifi","TV","Lavadora"],
+    services: ["Hasta 10 huéspedes"],
+    location: "Manantiales — Maldonado",
+    whatsappMsg: "Hola, me interesa la Casa 4 dorm con vista al mar en Manantiales.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1582676575753376556",
+  },
+  {
+    slug: "depto-playa-brava-jose-ignacio",
+    name: "Dpto. Playa Brava José Ignacio",
+    zone: "José Ignacio",
+    guests: 6, bedrooms: 2, bathrooms: 2,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1308837144692350843/original/d4031072-5157-4f3a-949d-3c07655dd1d9.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1308837144692350843/original/d4031072-5157-4f3a-949d-3c07655dd1d9.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1308837144692350843/original/1bb10d50-44ad-46f7-a429-5e53af92b5be.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1308837144692350843/original/4ce5a5db-61cf-4200-94bb-4e0cc21cd570.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1308837144692350843/original/1700be18-f104-49b7-92ed-a4a63bde3c07.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1308837144692350843/original/7b8a1af1-9807-4791-97e1-aff1e0a58396.jpeg?im_w=720"],
+    description: "Departamento de 2 dormitorios en la Playa Brava de José Ignacio. Terraza exterior resguardada del viento. Barrio Club de Mar con piscina grande, piscina infantil, restaurant y bar de playa. Cochera y seguridad 24hs.",
+    features: ["Piscina del barrio","Acceso a la playa","Terraza exterior","Cochera","Seguridad 24hs","Cocina","Wifi"],
+    services: ["Check-in desde 15:00","Check-out antes de 11:00","Restaurant y bar de playa en el barrio"],
+    location: "Club de Mar, José Ignacio — Maldonado",
+    whatsappMsg: "Hola, me interesa el Dpto. en Playa Brava de José Ignacio.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1308837144692350843",
+  },
+  {
+    slug: "la-barraca-el-chorro",
+    name: "La Barraca — El Chorro",
+    zone: "La Barra",
+    guests: 8, bedrooms: 4, bathrooms: 2,
+    image: "https://a0.muscache.com/im/pictures/miso/Hosting-1077034480256618932/original/912d0c66-0fb4-4ffb-b14c-377071352cf4.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/miso/Hosting-1077034480256618932/original/912d0c66-0fb4-4ffb-b14c-377071352cf4.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1077034480256618932/original/7d8e79c2-2da6-4095-89e9-a5c3dfc17cda.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1077034480256618932/original/d8bc6feb-006d-4de4-a4c3-d314c90da224.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1077034480256618932/original/2d2e402c-0744-459c-9777-a72647df4cd9.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1077034480256618932/original/ddd33114-f2fd-4969-a16c-ee2b8012b85e.jpeg?im_w=720"],
+    description: "Casa muy linda a 1 cuadra de la Playa El Chorro, a 2 minutos de Manantiales. Vistas al mar, lindo parrillero y espacios exteriores. Loft extra disponible para 2 personas adicionales.",
+    features: ["Vista al mar","Acceso a la playa","Parrillero","Estacionamiento gratuito","Cocina","Wifi","Zona de trabajo"],
+    services: ["Check-in desde 15:00","Check-out antes de 12:00"],
+    location: "El Chorro, La Barra — Maldonado",
+    whatsappMsg: "Hola, me interesa La Barraca en El Chorro.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1077034480256618932",
+  },
+  {
+    slug: "arenas-san-jose",
+    name: "Arenas de San José",
+    zone: "José Ignacio",
+    guests: 6, bedrooms: 2, bathrooms: 2,
+    image: "https://a0.muscache.com/im/pictures/miso/Hosting-1011602503054180590/original/ae44c656-33a4-4361-9fc8-90a68be2903c.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/miso/Hosting-1011602503054180590/original/ae44c656-33a4-4361-9fc8-90a68be2903c.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1011602503054180590/original/895428b6-05df-4b5d-8ef2-91bcb133d7af.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1011602503054180590/original/eba0e6d3-ed80-45ca-83bb-ce82f1e5bc42.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1011602503054180590/original/89071c89-df71-4f7c-ab5c-4c853cf5bccb.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1011602503054180590/original/ce38e508-1d1f-4cd3-88fa-6d70629dd23d.jpeg?im_w=720"],
+    description: "Casa de madera espaciosa rodeada de verde entre dunas y pinos. A media cuadra de Casa Suaya y a solo 3km del pueblo de José Ignacio. Piscina incorporada para verano. Bicicletas disponibles. Alarma con respuesta.",
+    features: ["Piscina","Vista al jardín","Acceso compartido a la playa","2 bicicletas","Seguridad con alarma","Cocina","Wifi"],
+    services: ["Check-in desde 15:00","Check-out antes de 12:00"],
+    location: "Arenas de José Ignacio — Maldonado",
+    rating: 5.0, reviews: 1,
+    whatsappMsg: "Hola, me interesa Arenas de San José en José Ignacio.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1011602503054180590",
+  },
+  {
+    slug: "casa-5dorm-barrio-privado-san-carlos",
+    name: "Casa 5 dorm — Barrio Privado",
+    zone: "San Carlos",
+    guests: 10, bedrooms: 5, bathrooms: 4,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1491436202004356303/original/66e67505-2cbf-4ff7-a61a-cf467aa1109e.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-1491436202004356303/original/66e67505-2cbf-4ff7-a61a-cf467aa1109e.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1491436202004356303/original/ab019752-0003-4a61-bc3c-132f6973d6e3.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1491436202004356303/original/30ed6a33-67d3-4e11-a32a-7d6891690e7c.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1491436202004356303/original/ce36ac29-5929-49af-b500-9c8eeb16985c.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1491436202004356303/original/b4dd658e-efce-47bb-84ad-b03efa49026f.jpeg?im_w=720"],
+    description: "Casa en barrio privado con 5 dormitorios y piscina. Casa principal con living-comedor-cocina integrados, living exterior y parrillero con barra. Casa secundaria independiente con 2 dormitorios, estar y kitchenette.",
+    features: ["Piscina","Living exterior","Parrillero con barra","Casa secundaria independiente","Estacionamiento gratuito","Cocina","Wifi","Zona de trabajo"],
+    services: ["Check-in desde 15:00","Check-out antes de 11:00"],
+    location: "San Carlos — Maldonado",
+    whatsappMsg: "Hola, me interesa la Casa 5 dorm en Barrio Privado en San Carlos.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1491436202004356303",
+  },
+  {
+    slug: "casa-exclusiva-punta-ballena",
+    name: "Casa Exclusiva — Punta Ballena",
+    zone: "Punta Ballena",
+    guests: 10, bedrooms: 5, bathrooms: 6,
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3NzYxNTYzMTYyOTM4MDAwMA%3D%3D/original/d135d14a-b9cb-40b7-a5db-cac80889df88.jpeg?im_w=720",
+    gallery: ["https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3NzYxNTYzMTYyOTM4MDAwMA%3D%3D/original/d135d14a-b9cb-40b7-a5db-cac80889df88.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3NzYxNTYzMTYyOTM4MDAwMA%3D%3D/original/e98bad59-a6d2-485a-9bef-d724ed96c2c2.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3NzYxNTYzMTYyOTM4MDAwMA%3D%3D/original/b0937a79-e6b8-4e7a-b6f9-103f7ae04070.jpeg?im_w=720","https://a0.muscache.com/im/pictures/hosting/Hosting-1177615631629380000/original/3b21980c-3daf-4e06-a540-a974152c7ec9.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1177615631629380000/original/fca17bc4-7a73-468c-be50-4344140529fa.jpeg?im_w=720"],
+    description: "Casa exclusiva frente al mar en Punta Ballena, próxima al Club de Balleneros. Vista al mar desde todos lados. Piscina, jacuzzi y espacios exteriores muy disfrutables. Sauna y ducha exterior.",
+    features: ["Vista al mar","Piscina","Jacuzzi (temporada verano)","Sauna","Ducha exterior","Acceso a la playa","Estacionamiento gratuito","Cocina","Wifi"],
+    services: ["Consultar servicio de limpieza y chef","Check-in desde 15:00","Check-out antes de 11:00"],
+    location: "Punta Ballena — Maldonado",
+    rating: 5.0, reviews: 1,
+    whatsappMsg: "Hola, me interesa la Casa Exclusiva en Punta Ballena.",
+    airbnbUrl: "https://es-l.airbnb.com/rooms/1177615631629380000",
   },
 ];
 
 export const getPropertyBySlug = (slug: string) =>
   properties.find((p) => p.slug === slug);
-
-// ------------------------------------------------------------
-// EJEMPLO de cómo cargar una propiedad real:
-// ------------------------------------------------------------
-// import casa1 from "@/assets/casa-ejemplo-1.jpg";
-// import casa2 from "@/assets/casa-ejemplo-2.jpg";
-//
-// {
-//   slug: "casa-ejemplo",
-//   name: "Casa Ejemplo",
-//   zone: "La Barra",
-//   guests: 6,
-//   bedrooms: 3,
-//   bathrooms: 2,
-//   gallery: [casa1, casa2],
-//   description: "Descripción de la propiedad...",
-//   features: ["Piscina", "Parrillero", "Wi-Fi"],
-//   services: ["Limpieza incluida", "Check-in personalizado"],
-//   location: "La Barra — Maldonado",
-//   airbnbUrl: "https://www.airbnb.com/rooms/123456",
-// }
