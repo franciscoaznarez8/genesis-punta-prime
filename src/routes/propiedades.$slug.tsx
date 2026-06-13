@@ -16,7 +16,7 @@ export const Route = createFileRoute("/propiedades/$slug")({
       { name: "description", content: loaderData.property.description },
       { property: "og:title", content: loaderData.property.name },
       { property: "og:description", content: loaderData.property.description },
-      { property: "og:image", content: loaderData.property.image },
+      { property: "og:image", content: loaderData.property.gallery[0] },
     ] : [],
   }),
   notFoundComponent: () => (
@@ -116,6 +116,11 @@ function Page() {
               <button className="btn-navy w-full">Enviar consulta</button>
             </form>
             <a href={waLink(`Hola, me interesa ${p.name}.`)} target="_blank" rel="noreferrer" className="mt-3 btn-gold w-full"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
+            {p.airbnbUrl && (
+              <a href={p.airbnbUrl} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center justify-center gap-2 w-full border border-navy text-navy px-4 py-3 text-sm uppercase tracking-[0.18em] hover:bg-navy hover:text-white transition">
+                Ver en Airbnb
+              </a>
+            )}
           </aside>
         </div>
       </section>
@@ -127,7 +132,7 @@ function Page() {
             {others.map((o) => (
               <Link key={o.slug} to="/propiedades/$slug" params={{ slug: o.slug }} className="group block">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={o.image} alt={o.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={800} height={600} loading="lazy" />
+                  <img src={o.gallery[0]} alt={o.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={800} height={600} loading="lazy" />
                 </div>
                 <h3 className="mt-4 font-display text-xl text-navy">{o.name}</h3>
                 <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{o.zone}</p>
