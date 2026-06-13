@@ -40,8 +40,8 @@ function Home() {
             Gestionamos propiedades, cuidamos cada detalle y brindamos experiencias excepcionales a propietarios y huéspedes.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "300ms" }}>
-            <Link to="/propiedades" className="btn-gold">Ver propiedades <ArrowRight className="h-4 w-4" /></Link>
-            <a href={waLink()} target="_blank" rel="noreferrer" className="btn-outline-light"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
+            <a href={waLink("Hola, quiero que administren mi propiedad.")} target="_blank" rel="noreferrer" className="btn-gold">Quiero que administren mi propiedad <ArrowRight className="h-4 w-4" /></a>
+            <Link to="/propiedades" className="btn-outline-light">Ver propiedades</Link>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-[0.65rem] uppercase tracking-[0.4em]">
