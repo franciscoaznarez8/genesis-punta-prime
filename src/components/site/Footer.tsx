@@ -33,10 +33,9 @@ export function Footer() {
           <h4 className="eyebrow !text-gold-soft">Navegación</h4>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/" className="hover:text-gold">Inicio</Link></li>
-            <li><Link to="/propiedades" className="hover:text-gold">Propiedades</Link></li>
-            <li><Link to="/administracion-airbnb" className="hover:text-gold">Administración Airbnb</Link></li>
-            <li><Link to="/concierge" className="hover:text-gold">Servicios Concierge</Link></li>
-            <li><Link to="/sobre-nosotros" className="hover:text-gold">Sobre Nosotros</Link></li>
+            <li><Link to="/propiedades" className="hover:text-gold">Alquileres</Link></li>
+            <li><Link to="/ventas" className="hover:text-gold">Ventas</Link></li>
+            <li><Link to="/administracion-airbnb" className="hover:text-gold">Administración</Link></li>
             <li><Link to="/contacto" className="hover:text-gold">Contacto</Link></li>
           </ul>
         </div>

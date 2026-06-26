@@ -5,10 +5,9 @@ import { SITE, waLink } from "@/lib/site";
 
 const nav = [
   { to: "/", label: "Inicio" },
-  { to: "/propiedades", label: "Propiedades" },
-  { to: "/administracion-airbnb", label: "Administración Airbnb" },
-  { to: "/concierge", label: "Servicios Concierge" },
-  { to: "/sobre-nosotros", label: "Sobre Nosotros" },
+  { to: "/propiedades", label: "Alquileres" },
+  { to: "/ventas", label: "Ventas" },
+  { to: "/administracion-airbnb", label: "Administración" },
   { to: "/contacto", label: "Contacto" },
 ] as const;
 
