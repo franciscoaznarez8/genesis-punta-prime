@@ -27,12 +27,18 @@ function Page() {
             <img src={about} alt="Punta del Este" className="h-full w-full object-cover" width={1280} height={960} loading="lazy" />
           </div>
           <div>
-            <SectionTitle eyebrow="Sobre Nosotros" title="Una mirada local sobre Punta del Este" align="left" />
+            <SectionTitle eyebrow="Sobre Nosotros" title="Un equipo cercano, un servicio profesional" align="left" />
             <p className="mt-6 text-foreground/80 leading-relaxed">
-              Orígenes Propiedades nace de la pasión por Punta del Este y la convicción de que cada propiedad merece ser administrada con la misma dedicación con la que fue construida. Somos un equipo local especializado en alquiler temporario y administración integral de inmuebles premium.
+              En Orígenes Propiedades entendemos que detrás de cada propiedad hay una historia, una inversión y un proyecto personal. Por eso trabajamos de manera cercana, involucrándonos en cada operación y brindando una atención personalizada tanto a propietarios como a compradores, vendedores e inquilinos.
             </p>
             <p className="mt-4 text-foreground/80 leading-relaxed">
-              Trabajamos con propietarios que valoran la transparencia, la atención personalizada y los resultados sostenidos en el tiempo. Y con huéspedes que buscan experiencias auténticas, sin compromisos.
+              Nos especializamos en la venta, alquiler y administración de propiedades en Punta del Este, con un enfoque basado en la confianza, la transparencia y el conocimiento real del mercado local.
+            </p>
+            <p className="mt-4 text-foreground/80 leading-relaxed">
+              Conocemos personalmente cada propiedad que ofrecemos, recorremos cada espacio y cuidamos cada detalle. Creemos que esa cercanía marca la diferencia y nos permite recomendar con seguridad la opción adecuada para cada cliente.
+            </p>
+            <p className="mt-4 text-foreground/80 leading-relaxed">
+              Más que gestionar propiedades, buscamos construir relaciones duraderas y ofrecer un servicio profesional con trato humano.
             </p>
           </div>
         </div>
