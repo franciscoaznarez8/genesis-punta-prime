@@ -61,7 +61,7 @@ function Page() {
               <Instagram className="h-6 w-6 text-gold mt-1" />
               <div>
                 <div className="eyebrow">Instagram</div>
-                <div className="mt-1 font-display text-xl text-navy">@genesispropiedades</div>
+                <div className="mt-1 font-display text-xl text-navy">@origenespropiedades</div>
               </div>
             </a>
             <div className="flex items-start gap-4 p-6 border border-border bg-card">
