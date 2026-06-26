@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container-luxe py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2 max-w-sm">
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-3xl text-white">Génesis</span>
+            <span className="font-display text-3xl text-white">Orígenes</span>
             <span className="eyebrow !text-gold-soft">Propiedades</span>
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
@@ -53,7 +53,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-luxe py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/55">
-          <p>© {new Date().getFullYear()} Génesis Propiedades. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Orígenes Propiedades. Todos los derechos reservados.</p>
           <Link to="/privacidad" className="hover:text-gold">Política de privacidad</Link>
         </div>
       </div>

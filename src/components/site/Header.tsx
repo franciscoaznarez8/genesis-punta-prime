@@ -38,7 +38,7 @@ export function Header() {
               scrolled || open ? "text-navy" : "text-white"
             }`}
           >
-            Génesis
+            Orígenes
           </span>
           <span
             className={`text-[0.65rem] uppercase tracking-[0.3em] ${

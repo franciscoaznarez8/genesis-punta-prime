@@ -6,9 +6,9 @@ import { SITE, waLink } from "@/lib/site";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto — Génesis Propiedades Punta del Este" },
+      { title: "Contacto — Orígenes Propiedades Punta del Este" },
       { name: "description", content: "Contactanos por WhatsApp, email o Instagram. Atención personalizada para propietarios y huéspedes en Punta del Este." },
-      { property: "og:title", content: "Contacto — Génesis Propiedades" },
+      { property: "og:title", content: "Contacto — Orígenes Propiedades" },
       { property: "og:description", content: "Estamos a un mensaje de distancia." },
       { property: "og:url", content: "/contacto" },
     ],

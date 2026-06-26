@@ -6,9 +6,9 @@ import { SectionTitle } from "@/components/site/SectionTitle";
 export const Route = createFileRoute("/sobre-nosotros")({
   head: () => ({
     meta: [
-      { title: "Sobre Nosotros — Génesis Propiedades Punta del Este" },
+      { title: "Sobre Nosotros — Orígenes Propiedades Punta del Este" },
       { name: "description", content: "Equipo local especializado en administración de propiedades y alquileres temporarios en Punta del Este. Atención personalizada, transparencia y confianza." },
-      { property: "og:title", content: "Sobre Nosotros — Génesis Propiedades" },
+      { property: "og:title", content: "Sobre Nosotros — Orígenes Propiedades" },
       { property: "og:description", content: "Equipo local con conocimiento profundo del mercado de Punta del Este." },
       { property: "og:image", content: about },
       { property: "og:url", content: "/sobre-nosotros" },
@@ -29,7 +29,7 @@ function Page() {
           <div>
             <SectionTitle eyebrow="Sobre Nosotros" title="Una mirada local sobre Punta del Este" align="left" />
             <p className="mt-6 text-foreground/80 leading-relaxed">
-              Génesis Propiedades nace de la pasión por Punta del Este y la convicción de que cada propiedad merece ser administrada con la misma dedicación con la que fue construida. Somos un equipo local especializado en alquiler temporario y administración integral de inmuebles premium.
+              Orígenes Propiedades nace de la pasión por Punta del Este y la convicción de que cada propiedad merece ser administrada con la misma dedicación con la que fue construida. Somos un equipo local especializado en alquiler temporario y administración integral de inmuebles premium.
             </p>
             <p className="mt-4 text-foreground/80 leading-relaxed">
               Trabajamos con propietarios que valoran la transparencia, la atención personalizada y los resultados sostenidos en el tiempo. Y con huéspedes que buscan experiencias auténticas, sin compromisos.

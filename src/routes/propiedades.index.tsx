@@ -8,9 +8,9 @@ import { Search } from "lucide-react";
 export const Route = createFileRoute("/propiedades/")(({
   head: () => ({
     meta: [
-      { title: "Propiedades en Punta del Este — Génesis Propiedades" },
+      { title: "Propiedades en Punta del Este — Orígenes Propiedades" },
       { name: "description", content: "Explorá nuestra selección de propiedades premium para alquiler temporario en Punta del Este, La Barra, José Ignacio y zonas exclusivas." },
-      { property: "og:title", content: "Propiedades — Génesis Propiedades" },
+      { property: "og:title", content: "Propiedades — Orígenes Propiedades" },
       { property: "og:description", content: "Selección curada de propiedades premium en Punta del Este." },
       { property: "og:url", content: "/propiedades" },
     ],
