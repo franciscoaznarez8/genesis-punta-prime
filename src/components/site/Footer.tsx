@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container-luxe py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2 max-w-sm">
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-3xl text-white">Génesis</span>
+            <span className="font-display text-3xl text-white">Orígenes</span>
             <span className="eyebrow !text-gold-soft">Propiedades</span>
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
@@ -33,10 +33,9 @@ export function Footer() {
           <h4 className="eyebrow !text-gold-soft">Navegación</h4>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/" className="hover:text-gold">Inicio</Link></li>
-            <li><Link to="/propiedades" className="hover:text-gold">Propiedades</Link></li>
-            <li><Link to="/administracion-airbnb" className="hover:text-gold">Administración Airbnb</Link></li>
-            <li><Link to="/concierge" className="hover:text-gold">Servicios Concierge</Link></li>
-            <li><Link to="/sobre-nosotros" className="hover:text-gold">Sobre Nosotros</Link></li>
+            <li><Link to="/propiedades" className="hover:text-gold">Alquileres</Link></li>
+            <li><Link to="/ventas" className="hover:text-gold">Ventas</Link></li>
+            <li><Link to="/administracion-airbnb" className="hover:text-gold">Administración</Link></li>
             <li><Link to="/contacto" className="hover:text-gold">Contacto</Link></li>
           </ul>
         </div>
@@ -53,7 +52,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-luxe py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/55">
-          <p>© {new Date().getFullYear()} Génesis Propiedades. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Orígenes Propiedades. Todos los derechos reservados.</p>
           <Link to="/privacidad" className="hover:text-gold">Política de privacidad</Link>
         </div>
       </div>

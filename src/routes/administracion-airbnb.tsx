@@ -6,9 +6,9 @@ import { waLink } from "@/lib/site";
 export const Route = createFileRoute("/administracion-airbnb")({
   head: () => ({
     meta: [
-      { title: "Administración Airbnb en Punta del Este — Génesis Propiedades" },
+      { title: "Administración Airbnb en Punta del Este — Orígenes Propiedades" },
       { name: "description", content: "Gestión integral de su propiedad en Airbnb y plataformas premium: anuncios, reservas, check-in, limpieza, mantenimiento y maximización de ocupación." },
-      { property: "og:title", content: "Administración Airbnb — Génesis Propiedades" },
+      { property: "og:title", content: "Administración Airbnb — Orígenes Propiedades" },
       { property: "og:description", content: "Nos ocupamos de todo. Su propiedad rinde sin que usted se ocupe de la operación." },
       { property: "og:url", content: "/administracion-airbnb" },
     ],

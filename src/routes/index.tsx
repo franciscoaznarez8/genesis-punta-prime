@@ -10,9 +10,9 @@ import { waLink } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Génesis Propiedades — Alquiler y administración en Punta del Este" },
+      { title: "Orígenes Propiedades — Alquiler y administración en Punta del Este" },
       { name: "description", content: "Propiedades exclusivas para alquiler temporario y administración integral en Punta del Este. Gestionamos su propiedad con profesionalismo y cuidamos cada detalle." },
-      { property: "og:title", content: "Génesis Propiedades — Punta del Este" },
+      { property: "og:title", content: "Orígenes Propiedades — Punta del Este" },
       { property: "og:description", content: "Propiedades exclusivas y administración integral en Punta del Este." },
       { property: "og:image", content: hero },
       { property: "og:url", content: "/" },
@@ -31,7 +31,7 @@ function Home() {
         <img src={hero} alt="Punta del Este al atardecer" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/45 to-navy/80" />
         <div className="container-luxe relative z-10 py-32 md:py-40 text-white">
-          <p className="eyebrow !text-gold-soft animate-fade-up">Génesis Propiedades · Punta del Este</p>
+          <p className="eyebrow !text-gold-soft animate-fade-up">Orígenes Propiedades · Punta del Este</p>
           <h1 className="mt-5 font-display text-5xl md:text-7xl leading-[1.05] max-w-4xl animate-fade-up" style={{ animationDelay: "100ms" }}>
             Administración de propiedades y alquileres temporarios en Punta del Este
           </h1>
@@ -168,7 +168,7 @@ function Home() {
             {[
               { name: "Martina G.", role: "Propietaria, La Barra", text: "Confié mi casa en La Barra y nunca tuve que preocuparme por nada. Reportes claros y reservas todo el verano." },
               { name: "Juan & Sofía", role: "Huéspedes, Brasil", text: "La atención fue impecable de principio a fin. La casa lucía exactamente como en las fotos." },
-              { name: "Rodrigo P.", role: "Propietario, José Ignacio", text: "Profesionales, transparentes y con un cuidado obsesivo por el detalle. Recomiendo Génesis sin dudar." },
+              { name: "Rodrigo P.", role: "Propietario, José Ignacio", text: "Profesionales, transparentes y con un cuidado obsesivo por el detalle. Recomiendo Orígenes sin dudar." },
             ].map((t) => (
               <figure key={t.name} className="bg-background p-8 border border-border">
                 <div className="flex gap-1 text-gold">{Array.from({length:5}).map((_,i)=><Star key={i} className="h-4 w-4 fill-current"/>)}</div>
