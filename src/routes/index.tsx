@@ -10,10 +10,10 @@ import { waLink } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Orígenes Propiedades — Alquiler y administración en Punta del Este" },
-      { name: "description", content: "Propiedades exclusivas para alquiler temporario y administración integral en Punta del Este. Gestionamos su propiedad con profesionalismo y cuidamos cada detalle." },
+      { title: "Orígenes Propiedades — Venta, alquiler y administración en Punta del Este" },
+      { name: "description", content: "Encontramos la propiedad ideal y cuidamos cada inversión como si fuera propia. Venta, alquiler y administración de propiedades en Punta del Este con atención personalizada." },
       { property: "og:title", content: "Orígenes Propiedades — Punta del Este" },
-      { property: "og:description", content: "Propiedades exclusivas y administración integral en Punta del Este." },
+      { property: "og:description", content: "Venta, alquiler y administración de propiedades en Punta del Este con atención personalizada y conocimiento local." },
       { property: "og:image", content: hero },
       { property: "og:url", content: "/" },
     ],
@@ -33,11 +33,11 @@ function Home() {
         <div className="container-luxe relative z-10 py-32 md:py-40 text-white">
           <p className="eyebrow !text-gold-soft animate-fade-up">Orígenes Propiedades · Punta del Este</p>
           <h1 className="mt-5 font-display text-5xl md:text-7xl leading-[1.05] max-w-4xl animate-fade-up" style={{ animationDelay: "100ms" }}>
-            Administración de propiedades y alquileres temporarios en Punta del Este
+            Encontramos la propiedad ideal y cuidamos cada inversión como si fuera propia.
           </h1>
           <span className="mt-7 inline-block hairline animate-fade-up" style={{ animationDelay: "150ms" }} />
           <p className="mt-6 max-w-2xl text-lg text-white/85 leading-relaxed animate-fade-up" style={{ animationDelay: "200ms" }}>
-            Nos ocupamos de todo para que tu propiedad genere ingresos sin que tengas que preocuparte por nada.
+            Venta, alquiler y administración de propiedades en Punta del Este, con atención personalizada, conocimiento local y un compromiso real con cada cliente.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "300ms" }}>
             <a href={waLink("Hola, me interesa que administren mi propiedad.")} target="_blank" rel="noreferrer" className="btn-gold"><Sparkles className="h-4 w-4" /> Quiero que administren mi propiedad</a>
