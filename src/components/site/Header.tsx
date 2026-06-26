@@ -8,6 +8,7 @@ const nav = [
   { to: "/propiedades", label: "Alquileres" },
   { to: "/ventas", label: "Ventas" },
   { to: "/administracion-airbnb", label: "Administración" },
+  { to: "/sobre-nosotros", label: "Sobre nosotros" },
   { to: "/contacto", label: "Contacto" },
 ] as const;
 

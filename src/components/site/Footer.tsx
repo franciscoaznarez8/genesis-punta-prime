@@ -36,6 +36,7 @@ export function Footer() {
             <li><Link to="/propiedades" className="hover:text-gold">Alquileres</Link></li>
             <li><Link to="/ventas" className="hover:text-gold">Ventas</Link></li>
             <li><Link to="/administracion-airbnb" className="hover:text-gold">Administración</Link></li>
+            <li><Link to="/sobre-nosotros" className="hover:text-gold">Sobre nosotros</Link></li>
             <li><Link to="/contacto" className="hover:text-gold">Contacto</Link></li>
           </ul>
         </div>
