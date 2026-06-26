@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VentasRouteImport } from './routes/ventas'
 import { Route as SobreNosotrosRouteImport } from './routes/sobre-nosotros'
 import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as ContactoRouteImport } from './routes/contacto'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as PropiedadesIndexRouteImport } from './routes/propiedades.index'
 import { Route as PropiedadesSlugRouteImport } from './routes/propiedades.$slug'
 
+const VentasRoute = VentasRouteImport.update({
+  id: '/ventas',
+  path: '/ventas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SobreNosotrosRoute = SobreNosotrosRouteImport.update({
   id: '/sobre-nosotros',
   path: '/sobre-nosotros',
@@ -66,6 +72,7 @@ export interface FileRoutesByFullPath {
   '/contacto': typeof ContactoRoute
   '/privacidad': typeof PrivacidadRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/ventas': typeof VentasRoute
   '/propiedades/$slug': typeof PropiedadesSlugRoute
   '/propiedades/': typeof PropiedadesIndexRoute
 }
@@ -76,6 +83,7 @@ export interface FileRoutesByTo {
   '/contacto': typeof ContactoRoute
   '/privacidad': typeof PrivacidadRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/ventas': typeof VentasRoute
   '/propiedades/$slug': typeof PropiedadesSlugRoute
   '/propiedades': typeof PropiedadesIndexRoute
 }
@@ -87,6 +95,7 @@ export interface FileRoutesById {
   '/contacto': typeof ContactoRoute
   '/privacidad': typeof PrivacidadRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/ventas': typeof VentasRoute
   '/propiedades/$slug': typeof PropiedadesSlugRoute
   '/propiedades/': typeof PropiedadesIndexRoute
 }
@@ -99,6 +108,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/privacidad'
     | '/sobre-nosotros'
+    | '/ventas'
     | '/propiedades/$slug'
     | '/propiedades/'
   fileRoutesByTo: FileRoutesByTo
@@ -109,6 +119,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/privacidad'
     | '/sobre-nosotros'
+    | '/ventas'
     | '/propiedades/$slug'
     | '/propiedades'
   id:
@@ -119,6 +130,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/privacidad'
     | '/sobre-nosotros'
+    | '/ventas'
     | '/propiedades/$slug'
     | '/propiedades/'
   fileRoutesById: FileRoutesById
@@ -130,12 +142,20 @@ export interface RootRouteChildren {
   ContactoRoute: typeof ContactoRoute
   PrivacidadRoute: typeof PrivacidadRoute
   SobreNosotrosRoute: typeof SobreNosotrosRoute
+  VentasRoute: typeof VentasRoute
   PropiedadesSlugRoute: typeof PropiedadesSlugRoute
   PropiedadesIndexRoute: typeof PropiedadesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ventas': {
+      id: '/ventas'
+      path: '/ventas'
+      fullPath: '/ventas'
+      preLoaderRoute: typeof VentasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sobre-nosotros': {
       id: '/sobre-nosotros'
       path: '/sobre-nosotros'
@@ -202,6 +222,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactoRoute: ContactoRoute,
   PrivacidadRoute: PrivacidadRoute,
   SobreNosotrosRoute: SobreNosotrosRoute,
+  VentasRoute: VentasRoute,
   PropiedadesSlugRoute: PropiedadesSlugRoute,
   PropiedadesIndexRoute: PropiedadesIndexRoute,
 }
