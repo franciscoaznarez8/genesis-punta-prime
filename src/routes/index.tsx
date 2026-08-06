@@ -62,6 +62,25 @@ function Home() {
         </div>
       </section>
 
+      {/* VENTAS STRIP */}
+      <section className="py-16 bg-navy text-white">
+        <div className="container-luxe flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <p className="eyebrow !text-gold-soft">También hacemos</p>
+            <h2 className="mt-2 font-display text-3xl md:text-4xl max-w-xl">Compra y venta de propiedades en Punta del Este</h2>
+            <p className="mt-3 text-white/75 max-w-lg">
+              Asesoramos compradores e inversores con conocimiento real del mercado local, acceso a propiedades off-market y acompañamiento en todo el proceso.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 flex-shrink-0">
+            <Link to="/ventas" className="btn-gold">Ver sección ventas <ArrowRight className="h-4 w-4" /></Link>
+            <a href={waLink("Hola, estoy buscando una propiedad para comprar en Punta del Este.")} target="_blank" rel="noreferrer" className="btn-outline-light">
+              <MessageCircle className="h-4 w-4" /> Consultar
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ADMINISTRACIÓN */}
       <section className="py-24 md:py-32 bg-sand/40">
         <div className="container-luxe">
