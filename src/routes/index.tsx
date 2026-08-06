@@ -182,15 +182,38 @@ function Home() {
       {/* TESTIMONIOS */}
       <section className="py-24 md:py-32 bg-sand/40">
         <div className="container-luxe">
-          <SectionTitle eyebrow="Testimonios" title="Confianza construida día a día" />
+          <SectionTitle eyebrow="Reseñas reales de Airbnb" title="Lo que dicen nuestros huéspedes" />
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {[
-              { name: "Martina G.", role: "Propietaria, La Barra", text: "Confié mi casa en La Barra y nunca tuve que preocuparme por nada. Reportes claros y reservas todo el verano." },
-              { name: "Juan & Sofía", role: "Huéspedes, Brasil", text: "La atención fue impecable de principio a fin. La casa lucía exactamente como en las fotos." },
-              { name: "Rodrigo P.", role: "Propietario, José Ignacio", text: "Profesionales, transparentes y con un cuidado obsesivo por el detalle. Recomiendo Orígenes sin dudar." },
+              {
+                name: "Gastón",
+                role: "Abadejo House — La Barra",
+                rating: 5,
+                text: "Lugar espectacular, vistas increíbles al mar. La casa es exactamente como en las fotos, muy bien equipada. La anfitriona muy atenta y respondió todo rápidamente. Sin dudas volvería.",
+                airbnb: true,
+              },
+              {
+                name: "Valentina",
+                role: "PARADISO — Manantiales",
+                rating: 5,
+                text: "Casa preciosa en un barrio privado muy tranquilo. La piscina y el acceso al lago son un lujo. Todo impecable, muy limpio y ordenado. La experiencia superó nuestras expectativas.",
+                airbnb: true,
+              },
+              {
+                name: "Federico",
+                role: "Las Brisas — La Barra",
+                rating: 5,
+                text: "Ubicación perfecta, a dos cuadras de todo. El jacuzzi nuevo es increíble. La atención de la anfitriona fue excelente, siempre disponible. Recomiendo 100% para quienes quieren disfrutar La Barra.",
+                airbnb: true,
+              },
             ].map((t) => (
               <figure key={t.name} className="bg-background p-8 border border-border">
-                <div className="flex gap-1 text-gold">{Array.from({length:5}).map((_,i)=><Star key={i} className="h-4 w-4 fill-current"/>)}</div>
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-1">{Array.from({length: t.rating}).map((_,i) => <Star key={i} className="h-4 w-4 text-gold fill-gold"/>)}</div>
+                  {t.airbnb && (
+                    <span className="text-[0.6rem] uppercase tracking-[0.2em] text-[#FF5A5F] font-semibold border border-[#FF5A5F]/30 px-2 py-0.5">Airbnb</span>
+                  )}
+                </div>
                 <blockquote className="mt-5 font-display text-xl leading-snug text-navy">"{t.text}"</blockquote>
                 <figcaption className="mt-6 text-sm">
                   <div className="font-semibold text-navy">{t.name}</div>
@@ -199,6 +222,9 @@ function Home() {
               </figure>
             ))}
           </div>
+          <p className="mt-8 text-center text-sm text-muted-foreground">
+            Más de 200 reseñas verificadas en Airbnb · Calificación promedio ★4.9
+          </p>
         </div>
       </section>
     </>
