@@ -28,7 +28,7 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative min-h-screen flex items-center">
-        <img src={hero} alt="Punta del Este al atardecer" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={hero} alt="José Ignacio, Uruguay — faro y playa al atardecer" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/45 to-navy/80" />
         <div className="container-luxe relative z-10 py-32 md:py-40 text-white">
           <p className="eyebrow !text-gold-soft animate-fade-up">Orígenes Propiedades · Punta del Este</p>
