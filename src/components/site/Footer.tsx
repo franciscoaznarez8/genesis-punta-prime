@@ -55,7 +55,8 @@ export function Footer() {
         <div className="container-luxe py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/55">
           <p>© {new Date().getFullYear()} Orígenes Propiedades. Todos los derechos reservados.</p>
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-            <span>Foto de portada: <a href="https://commons.wikimedia.org/wiki/File:Faro_de_Jos%C3%A9_Ignacio_a%C3%A9rea.jpg" target="_blank" rel="noreferrer" className="hover:text-gold">Jimmy Baikovicius</a> · CC BY-SA 2.0</span>
+            <span>Hero: <a href="https://commons.wikimedia.org/wiki/File:Faro_de_Jos%C3%A9_Ignacio_a%C3%A9rea.jpg" target="_blank" rel="noreferrer" className="hover:text-gold">Jimmy Baikovicius</a> · CC BY-SA 2.0</span>
+            <span>Servicios: <a href="https://commons.wikimedia.org/wiki/File:Puente_de_la_Barra_on_Pink_and_Blue_Hour_121105-0821-jikatu.jpg" target="_blank" rel="noreferrer" className="hover:text-gold">Jimmy Baikovicius</a> · CC BY-SA 2.0</span>
             <Link to="/privacidad" className="hover:text-gold">Política de privacidad</Link>
           </div>
         </div>
