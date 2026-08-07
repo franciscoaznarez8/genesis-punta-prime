@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Star, KeyRound, ShieldCheck, Heart, MessageCircle } from "lucide-react";
 import hero from "@/assets/hero-punta-este.jpg";
@@ -179,7 +180,7 @@ function Home() {
         </div>
       </section>
 
-     {/* TESTIMONIOS */}
+    {/* TESTIMONIOS */}
       <section className="py-24 md:py-32 bg-sand/40">
         <div className="container-luxe">
           <SectionTitle eyebrow="Reseñas verificadas de Airbnb" title="Lo que dicen nuestros huéspedes" />
@@ -188,82 +189,83 @@ function Home() {
             <span className="font-display text-2xl text-navy">4.9</span>
             <span className="text-muted-foreground text-sm">· Más de 200 reseñas verificadas en Airbnb</span>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                name: "Huésped verificado",
-                property: "PARADISO — Pueblo Mío",
-                rating: 5,
-                text: "La casa es realmente espectacular, las fotos no le hacen justicia. Ambientes súper amplios, muy cómodos para pasar un buen tiempo en familia. El barrio es hermoso, muy tranquilo y rodeado de naturaleza. Sofi como anfitriona una genia, nos ayudó en todo lo que necesitamos. Sin dudas intentaremos volver.",
-              },
-              {
-                name: "Huésped verificado",
-                property: "PARADISO — Pueblo Mío",
-                rating: 5,
-                text: "Todo impecable. Fuimos en familia, se organizó de un momento al otro y la casa estuvo impecable. Todo perfecto. La casa hermosa. Volvería a ir.",
-              },
-              {
-                name: "Huésped verificado",
-                property: "Abadejo House — La Barra",
-                rating: 5,
-                text: "Nos recibieron con mucha atención y cordialidad. Cuando pedíamos algo, se encargaban de ello con prontitud. Casa excelente, alojamiento excelente, servicio perfecto.",
-              },
-              {
-                name: "Huésped verificado",
-                property: "Abadejo House — La Barra",
-                rating: 5,
-                text: "La estadía cumplió con nuestras expectativas y tuvimos días muy felices. La puesta de sol en el balcón con piscina y jacuzzi fue maravillosa. El servicio de limpieza diario fue muy útil. Sofi y su madre responden rápidamente y son serviciales.",
-              },
-              {
-                name: "Huésped verificado",
-                property: "Las Brisas — La Barra",
-                rating: 5,
-                text: "La Predisposición de Sofía para con nosotros fue excelente desde el día 1. La casa está muy bien equipada y muy bien ubicada. Todo lo demás es excelente y es un lugar para recomendar sin lugar a dudas.",
-              },
-              {
-                name: "Huésped verificado",
-                property: "Casa 5 dorm — Pueblo Mío",
-                rating: 5,
-                text: "Una experiencia excelente. El lugar es hermoso, muy cuidado y con instalaciones impecables. Todo estaba tal cual (o mejor) que en las fotos. La atención de Sofi fue increíble: siempre atenta, súper amable y respondiendo rapidísimo a cualquier consulta. Sin dudas volveríamos y lo recomendamos 100%.",
-              },
-              {
-                name: "Huésped verificado",
-                property: "Casa en José Ignacio",
-                rating: 5,
-                text: "Tremenda casa a 2 cuadras de las dos playas! A 1 cuadra del pueblo y de todos los restos. La casa es impecable y tiene de todo. Es súper completa, toda nueva. Realmente recomendable.",
-              },
-              {
-                name: "Huésped verificado",
-                property: "Casa 5 dorm — Pueblo Mío",
-                rating: 5,
-                text: "La casa es increíble, incluso mejor que las fotos. Es espacioso, muy limpio y está bien equipado. Sofía es una excelente anfitriona, muy receptiva, fácil de comunicar y rápida para ayudar. Definitivamente me hospedaría aquí de nuevo.",
-              },
-              {
-                name: "Huésped verificado",
-                property: "Abadejo House — La Barra",
-                rating: 5,
-                text: "Esta es una hermosa casa de playa con mucho espacio para nuestro grupo de 9. Estás a 2 cuadras de la playa y a unas 4-5 cuadras de las tiendas y cafés de Manantiales. Los anfitriones son muy amables y receptivos.",
-              },
-            ].map((t, i) => (
-              <figure key={i} className="bg-background p-6 border border-border flex flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-0.5">
-                    {Array.from({length: t.rating}).map((_,j) => <Star key={j} className="h-4 w-4 text-gold fill-gold"/>)}
-                  </div>
-                  <span className="text-[0.6rem] uppercase tracking-[0.2em] text-[#FF5A5F] font-semibold border border-[#FF5A5F]/40 px-2 py-0.5 rounded-sm">Airbnb ✓</span>
-                </div>
-                <blockquote className="text-foreground/80 leading-relaxed text-sm flex-1">"{t.text}"</blockquote>
-                <figcaption>
-                  <div className="text-xs font-semibold text-navy">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.property}</div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <a href="https://www.airbnb.com/users/show/23459639" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm text-[#FF5A5F] hover:underline">
-              Ver todas las reseñas en Airbnb →
-            </a>
+          <TestimoniosGrid />
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="py-24 md:py-32 bg-navy text-white">
+        <div className="container-luxe text-center max-w-3xl mx-auto">
+          <p className="eyebrow !text-gold-soft">Hablemos</p>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl">¿Listo para dar el siguiente paso?</h2>
+          <p className="mt-6 text-white/75 leading-relaxed">Encontramos la propiedad ideal, gestionamos la tuya o te asesoramos en tu próxima inversión en Punta del Este.</p>
+          <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <a href={waLink("Hola, quiero saber más sobre los servicios de Orígenes Propiedades.")} target="_blank" rel="noreferrer" className="btn-gold"><MessageCircle className="h-4 w-4" /> Escribinos</a>
+            <Link to="/propiedades" className="btn-outline-light">Ver propiedades <ArrowRight className="h-4 w-4" /></Link>
           </div>
         </div>
       </section>
+    </>
+  );
+}
+
+const TODOS_TESTIMONIOS = [
+  { property: "PARADISO — Pueblo Mío", rating: 5, text: "La casa es realmente espectacular, las fotos no le hacen justicia. Ambientes súper amplios, muy cómodos para pasar un buen tiempo en familia. El barrio es hermoso, muy tranquilo y rodeado de naturaleza. Sofi como anfitriona una genia, nos ayudó en todo lo que necesitamos. Sin dudas intentaremos volver." },
+  { property: "PARADISO — Pueblo Mío", rating: 5, text: "Todo impecable. Fuimos en familia, se organizó de un momento al otro y la casa estuvo impecable. Todo perfecto. El hermano de Sofi nos hizo un asado increíble. La verdad que valió la pena. La casa hermosa. Volvería a ir." },
+  { property: "PARADISO — Pueblo Mío", rating: 5, text: "Pasamos divino, una casa espectacular con todas las comodidades. Siempre en contacto. Nos recibieron y estuvieron atentos. Súper recomendable. Sin dudas para volver." },
+  { property: "PARADISO — Pueblo Mío", rating: 5, text: "La casa es espectacular, cómoda, amplia, bien pensada, todo disponible para disfrutar. Sofía y familia son excelentes anfitriones, siempre prontos para resolver. Si estás buscando espacio y tranquilidad este es el lugar." },
+  { property: "PARADISO — Pueblo Mío", rating: 5, text: "La casa es un sueño. Súper amplios los ambientes, muchos sofás y estufas a leña. Ambientes muy cálidos con linda decoración, muy bien distribuida, muy bien equipada, las camas cómodas. Muy recomendable." },
+  { property: "Abadejo House — La Barra", rating: 5, text: "Nos recibieron con mucha atención y cordialidad. Cuando pedíamos algo, se encargaban de ello con prontitud. Casa excelente, alojamiento excelente, servicio perfecto." },
+  { property: "Abadejo House — La Barra", rating: 5, text: "La estadía cumplió con nuestras expectativas y tuvimos días muy felices. La puesta de sol en el balcón con piscina y jacuzzi fue maravillosa. El servicio de limpieza diario fue muy útil. Sofi y su madre responden rápidamente y son serviciales." },
+  { property: "Abadejo House — La Barra", rating: 5, text: "Esta es una hermosa casa de playa con mucho espacio para nuestro grupo de 9. Gran espacio de parrilla al aire libre y amplio espacio para cenar. Estás a 2 cuadras de la playa. Los anfitriones son muy amables y receptivos." },
+  { property: "Abadejo House — La Barra", rating: 5, text: "Sofi fue muy amable en cada contacto y muy flexible. La casa es tal cual se muestra en las fotos, muy cómoda y con una ubicación privilegiada. Cuenta con todos los elementos para una gran estadía." },
+  { property: "Las Brisas — La Barra", rating: 5, text: "La predisposición de Sofía para con nosotros fue excelente desde el día 1. La casa está muy bien equipada y muy bien ubicada. Todo lo demás es excelente y es un lugar para recomendar sin lugar a dudas." },
+  { property: "Las Brisas — La Barra", rating: 5, text: "La casa es tal cual las fotos, se encuentra en un barrio tranquilo y tiene mucha privacidad. Está próxima a locales comerciales y a la playa. La dueña ha sido amable y ha estado atenta a nuestras necesidades." },
+  { property: "Casa 5 dorm — Pueblo Mío", rating: 5, text: "Una experiencia excelente. El lugar es hermoso, muy cuidado y con instalaciones impecables. Todo estaba tal cual (o mejor) que en las fotos. La atención de Sofi fue increíble: siempre atenta, súper amable y respondiendo rapidísimo. Sin dudas volveríamos y lo recomendamos 100%." },
+  { property: "Casa 5 dorm — Pueblo Mío", rating: 5, text: "La casa es increíble, incluso mejor que las fotos. Espacioso, muy limpio y bien equipado. Sofía es una excelente anfitriona, muy receptiva y rápida para ayudar. Definitivamente me hospedaría aquí de nuevo." },
+  { property: "Casa 5 dorm — Pueblo Mío", rating: 5, text: "Mi estancia fue espectacular. El lugar es hermoso, muy cómodo y perfectamente cuidado. Sofía fue una anfitriona encantadora: atenta, amable y siempre dispuesta a ayudar. Sin duda volvería. ¡Totalmente recomendable!" },
+  { property: "Casa 5 dorm — Pueblo Mío", rating: 5, text: "La casa es hermosa, tal como sale en las fotos. Muy amplia y cómoda, tiene todo lo que puedas necesitar. El barrio es muy tranquilo. Sofía súper atenta y responde siempre enseguida. Muy recomendable." },
+  { property: "Casa en José Ignacio", rating: 5, text: "Tremenda casa a 2 cuadras de las dos playas. A 1 cuadra del pueblo y de todos los restos. La casa es impecable y tiene de todo. Es súper completa, toda nueva. Realmente recomendable." },
+  { property: "Casa en José Ignacio", rating: 5, text: "Sofi fue una anfitriona muy amable y atenta. Extremadamente educada. Nos encantó la casa y nuestra estancia. Sin duda volveremos para otras vacaciones." },
+  { property: "Casa en José Ignacio", rating: 5, text: "La casa es hermosa: nueva, moderna. Muy bien equipada y decorada. Cerca de la playa y el pueblo de José Ignacio con todos los restaurants y tiendas a pie. Gran estadía en familia." },
+  { property: "Casa en José Ignacio", rating: 5, text: "Fueron unas vacaciones espectaculares. Sofía fue una anfitriona muy amable y atenta. Nos enamoramos de la casa. Todo funcionó a la perfección, la ubicación es estupenda y el lugar es mágico. Sin dudas lo recomiendo." },
+];
+
+function TestimoniosGrid() {
+  const [verTodos, setVerTodos] = useState(false);
+  const visibles = verTodos ? TODOS_TESTIMONIOS : TODOS_TESTIMONIOS.slice(0, 6);
+  return (
+    <>
+      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {visibles.map((t, i) => (
+          <figure key={i} className="bg-background p-6 border border-border flex flex-col gap-4">
+            <div className="flex items-center justify-between">
+              <div className="flex gap-0.5">
+                {Array.from({length: t.rating}).map((_,j) => <Star key={j} className="h-4 w-4 text-gold fill-gold"/>)}
+              </div>
+              <span className="text-[0.6rem] uppercase tracking-[0.2em] text-[#FF5A5F] font-semibold border border-[#FF5A5F]/40 px-2 py-0.5 rounded-sm">Airbnb ✓</span>
+            </div>
+            <blockquote className="text-foreground/80 leading-relaxed text-sm flex-1">"{t.text}"</blockquote>
+            <figcaption>
+              <div className="text-xs font-semibold text-navy">Huésped verificado</div>
+              <div className="text-xs text-muted-foreground">{t.property}</div>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        {!verTodos && (
+          <button
+            onClick={() => setVerTodos(true)}
+            className="inline-flex items-center gap-2 px-6 py-3 border border-navy text-navy hover:bg-navy hover:text-white text-[0.75rem] font-semibold uppercase tracking-[0.15em] transition-colors"
+          >
+            Ver todas las reseñas ({TODOS_TESTIMONIOS.length})
+          </button>
+        )}
+        <a href="https://www.airbnb.com/users/show/23459639" target="_blank" rel="noreferrer" className="text-sm text-[#FF5A5F] hover:underline">
+          Ver en Airbnb →
+        </a>
+      </div>
+    </>
+  );
+}
