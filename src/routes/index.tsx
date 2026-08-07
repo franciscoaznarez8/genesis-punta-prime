@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Star, KeyRound, ShieldCheck, Heart, MessageCircle } from "lucide-react";
 import hero from "@/assets/hero-punta-este.jpg";
-import about from "@/assets/about-punta.jpg";
+const about = "https://a0.muscache.com/im/pictures/miso/Hosting-4525348/original/a980e24f-0f65-44cc-9c76-ed643868b072.jpeg?im_w=1200";
 import { properties } from "@/data/properties";
 import { PropertyCard } from "@/components/site/PropertyCard";
 import { SectionTitle } from "@/components/site/SectionTitle";
