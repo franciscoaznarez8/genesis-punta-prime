@@ -124,7 +124,7 @@ function Home() {
             <Link to="/concierge" className="mt-10 inline-flex btn-navy">Conocer más</Link>
           </div>
           <div className="relative aspect-[4/5] overflow-hidden">
-            <img src={about} alt="Puente de La Barra sobre el Arroyo Maldonado, La Barra, Maldonado, Uruguay" loading="lazy" width={1280} height={1600} className="h-full w-full object-cover" />
+            <img src={about} alt="Vista aérea del Puente de La Barra y la desembocadura del Arroyo Maldonado, Maldonado, Uruguay" loading="lazy" width={1280} height={1600} className="h-full w-full object-cover" />
             <div className="absolute inset-0 ring-1 ring-inset ring-gold/30" />
           </div>
         </div>
