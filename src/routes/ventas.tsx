@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle, Home, TrendingUp, ShieldCheck, Users, MapPin, ArrowRight } from "lucide-react";
+import { MessageCircle, Home, TrendingUp, ShieldCheck, Users, MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { waLink } from "@/lib/site";
 import about from "@/assets/about-punta.jpg";
@@ -36,7 +36,7 @@ const beneficios = [
   { icon: TrendingUp, title: "Conocimiento del mercado", text: "Años de experiencia en la zona nos permiten asesorarte sobre precios reales y oportunidades únicas." },
   { icon: ShieldCheck, title: "Seguridad jurídica", text: "Te acompañamos en todo el proceso: oferta, promesa de compraventa, escritura y trámites." },
   { icon: Users, title: "Atención personalizada", text: "Un asesor dedicado durante todo el proceso, sin intermediarios innecesarios." },
-  { icon: MapPin, title: "Conocemos cada zona", desc: "Conocemos cada barrio, cada calle y cada propiedad en detalle — información que no encontrás en internet." },
+  { icon: MapPin, title: "Conocemos cada zona", text: "Conocemos cada barrio, cada calle y cada propiedad en detalle — información que no encontrás en internet." },
   { icon: CheckCircle2, title: "Propiedades off-market", text: "Acceso a propiedades que no se publican abiertamente, antes de que lleguen al mercado general." },
 ];
 
@@ -124,14 +124,14 @@ function Page() {
                   </div>
                 </div>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  
+                  <a
                     href={waLink("Hola Sofía, me interesa consultar por terrenos en Barrio Nativo, José Ignacio.")}
                     target="_blank" rel="noreferrer"
                     className="btn-gold"
                   >
                     <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
                   </a>
-                  
+                  <a
                     href="https://nativojoseignacio.com.uy"
                     target="_blank" rel="noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-2.5 border border-navy text-navy hover:bg-navy hover:text-white text-sm font-semibold uppercase tracking-[0.1em] transition-colors"
@@ -175,7 +175,7 @@ function Page() {
                   </div>
                 </div>
                 <div className="mt-8">
-                  
+                  <a
                     href={waLink("Hola Sofía, me interesa consultar por terrenos en Pueblo Mío Golf, Manantiales.")}
                     target="_blank" rel="noreferrer"
                     className="btn-gold"
@@ -239,7 +239,7 @@ function Page() {
                   </div>
                 </div>
                 <div className="mt-8">
-                  
+                  <a
                     href={waLink("Hola Sofía, me interesa consultar por terrenos en Pueblo Mío, Manantiales.")}
                     target="_blank" rel="noreferrer"
                     className="btn-gold"
