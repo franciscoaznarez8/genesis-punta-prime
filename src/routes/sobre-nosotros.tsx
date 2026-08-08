@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ShieldCheck, MapPin, Eye, Heart } from "lucide-react";
 import about from "@/assets/about-punta.jpg";
+import equipoAsset from "@/assets/equipo-origenes.jpg.asset.json";
 import { SectionTitle } from "@/components/site/SectionTitle";
 
 export const Route = createFileRoute("/sobre-nosotros")({
@@ -40,6 +41,20 @@ function Page() {
             <p className="mt-4 text-foreground/80 leading-relaxed">
               Más que gestionar propiedades, buscamos construir relaciones duraderas y ofrecer un servicio profesional con trato humano.
             </p>
+
+            <figure className="mt-10">
+              <div className="overflow-hidden">
+                <img
+                  src={equipoAsset.url}
+                  alt="Familia fundadora de Orígenes Propiedades en Maldonado, Uruguay"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-muted-foreground">
+                Detrás de Orígenes Propiedades hay una familia de Punta del Este.
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
