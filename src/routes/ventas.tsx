@@ -90,8 +90,190 @@ function Page() {
         </div>
       </section>
 
-      {/* ZONAS */}
+      {/* PROYECTOS EN VENTA */}
       <section className="py-24 bg-background">
+        <div className="container-luxe">
+          <SectionTitle
+            eyebrow="Proyectos en venta"
+            title="Terrenos y lotes disponibles"
+            subtitle="Oportunidades seleccionadas en los mejores barrios privados de Maldonado. Consultame directamente para más información."
+          />
+
+          <div className="mt-16 space-y-24">
+
+            {/* NATIVO */}
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src="https://nativojoseignacio.com.uy/images/assets/new_nativo_jose_ignacio.jpg"
+                  alt="Barrio Nativo José Ignacio"
+                  className="h-full w-full object-cover"
+                  width={1200} height={900}
+                />
+                <div className="absolute inset-0 ring-1 ring-inset ring-gold/20" />
+                <span className="absolute top-4 left-4 bg-navy/90 backdrop-blur px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-gold font-semibold">José Ignacio</span>
+              </div>
+              <div>
+                <p className="eyebrow">Barrio privado</p>
+                <h3 className="mt-2 font-display text-4xl text-navy">Barrio Nativo</h3>
+                <p className="mt-1 text-muted-foreground text-sm">José Ignacio · Maldonado</p>
+                <span className="mt-4 inline-block hairline" />
+                <p className="mt-5 text-foreground/80 leading-relaxed">
+                  Vivir en la naturaleza, a 3 minutos del pueblo más exclusivo del Uruguay. 124 hectáreas diseñadas para integrarse al entorno natural de José Ignacio, con lotes desde 4.000 m².
+                </p>
+                <div className="mt-6 grid grid-cols-3 gap-3 text-center">
+                  {[
+                    { num: "124 ha", label: "Superficie total" },
+                    { num: "4.000 m²", label: "Lotes desde" },
+                    { num: "3 min", label: "Del pueblo y la playa" },
+                  ].map((s) => (
+                    <div key={s.label} className="border border-border p-3">
+                      <div className="font-display text-xl text-navy">{s.num}</div>
+                      <div className="text-[0.6rem] uppercase tracking-[0.15em] text-muted-foreground mt-1">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6">
+                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-3">Amenities</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Club house con piscina","Zona deportiva","Cerco perimetral","Seguridad permanente","Bosque nativo","Espejos de agua"].map((a) => (
+                      <span key={a} className="text-xs border border-border px-3 py-1 text-navy">{a}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  
+                    href={waLink("Hola Sofía, me interesa consultar por terrenos en Barrio Nativo, José Ignacio.")}
+                    target="_blank" rel="noreferrer"
+                    className="btn-gold"
+                  >
+                    <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
+                  </a>
+                  
+                    href="https://nativojoseignacio.com.uy"
+                    target="_blank" rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 border border-navy text-navy hover:bg-navy hover:text-white text-sm font-semibold uppercase tracking-[0.1em] transition-colors"
+                  >
+                    Ver sitio oficial <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-border" />
+
+            {/* PUEBLO MÍO GOLF */}
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div className="order-last lg:order-first">
+                <p className="eyebrow">Barrio privado</p>
+                <h3 className="mt-2 font-display text-4xl text-navy">Pueblo Mío Golf</h3>
+                <p className="mt-1 text-muted-foreground text-sm">Manantiales · Maldonado</p>
+                <span className="mt-4 inline-block hairline" />
+                <p className="mt-5 text-foreground/80 leading-relaxed">
+                  57 lotes únicos que abrazan la cancha del Club de Golf La Barra. Un barrio selecto con lotes desde 4.000 hasta 8.000 m², con vistas al golf, tajamares o campo abierto. A 3 km de La Barra y 6,5 km de Manantiales.
+                </p>
+                <div className="mt-6 grid grid-cols-3 gap-3 text-center">
+                  {[
+                    { num: "57", label: "Lotes exclusivos" },
+                    { num: "8.000 m²", label: "Lotes hasta" },
+                    { num: "3 km", label: "De La Barra" },
+                  ].map((s) => (
+                    <div key={s.label} className="border border-border p-3">
+                      <div className="font-display text-xl text-navy">{s.num}</div>
+                      <div className="text-[0.6rem] uppercase tracking-[0.15em] text-muted-foreground mt-1">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6">
+                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-3">Amenities</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Seguridad 24hs","Calles asfaltadas","2 canchas de tenis","2 canchas de pádel","2 canchas de fútbol 5","Gimnasio","Salón de yoga"].map((a) => (
+                      <span key={a} className="text-xs border border-border px-3 py-1 text-navy">{a}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-8">
+                  
+                    href={waLink("Hola Sofía, me interesa consultar por terrenos en Pueblo Mío Golf, Manantiales.")}
+                    target="_blank" rel="noreferrer"
+                    className="btn-gold"
+                  >
+                    <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
+                  </a>
+                </div>
+              </div>
+              <div className="relative aspect-[4/3] overflow-hidden order-first lg:order-last">
+                <img
+                  src="https://a0.muscache.com/im/pictures/hosting/Hosting-1110330638772649350/original/63ada327-e509-4172-a5dd-98aa66ac9e2b.jpeg?im_w=1200"
+                  alt="Pueblo Mío Golf Manantiales"
+                  className="h-full w-full object-cover"
+                  width={1200} height={900}
+                />
+                <div className="absolute inset-0 ring-1 ring-inset ring-gold/20" />
+                <span className="absolute top-4 left-4 bg-navy/90 backdrop-blur px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-gold font-semibold">Manantiales</span>
+              </div>
+            </div>
+
+            <div className="border-t border-border" />
+
+            {/* PUEBLO MÍO */}
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src="https://a0.muscache.com/im/pictures/hosting/Hosting-1650988006759702876/original/c5b8a74c-e3ac-4506-b2e6-11effc80f737.jpeg?im_w=1200"
+                  alt="Pueblo Mío Manantiales"
+                  className="h-full w-full object-cover"
+                  width={1200} height={900}
+                />
+                <div className="absolute inset-0 ring-1 ring-inset ring-gold/20" />
+                <span className="absolute top-4 left-4 bg-navy/90 backdrop-blur px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-gold font-semibold">Manantiales</span>
+              </div>
+              <div>
+                <p className="eyebrow">Barrio privado</p>
+                <h3 className="mt-2 font-display text-4xl text-navy">Pueblo Mío</h3>
+                <p className="mt-1 text-muted-foreground text-sm">Manantiales · Maldonado</p>
+                <span className="mt-4 inline-block hairline" />
+                <p className="mt-5 text-foreground/80 leading-relaxed">
+                  El barrio privado más consolidado de la zona. 160 hectáreas con 180 lotes de 4.000 m² rodeados de 9 lagunas y 86 hectáreas de espacios comunes. A 5 minutos de Manantiales, equidistante entre Punta del Este y José Ignacio.
+                </p>
+                <div className="mt-6 grid grid-cols-3 gap-3 text-center">
+                  {[
+                    { num: "160 ha", label: "Superficie total" },
+                    { num: "180", label: "Lotes" },
+                    { num: "9", label: "Lagunas" },
+                  ].map((s) => (
+                    <div key={s.label} className="border border-border p-3">
+                      <div className="font-display text-xl text-navy">{s.num}</div>
+                      <div className="text-[0.6rem] uppercase tracking-[0.15em] text-muted-foreground mt-1">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6">
+                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-3">Amenities</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Club house sobre la laguna","3 sectores de piscina","Beach house","Guardería náutica","Zona deportiva","Gimnasio","Kids Club","Guest house","Seguridad 24hs"].map((a) => (
+                      <span key={a} className="text-xs border border-border px-3 py-1 text-navy">{a}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-8">
+                  
+                    href={waLink("Hola Sofía, me interesa consultar por terrenos en Pueblo Mío, Manantiales.")}
+                    target="_blank" rel="noreferrer"
+                    className="btn-gold"
+                  >
+                    <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ZONAS */}
+      <section className="py-24 bg-sand/40">
         <div className="container-luxe">
           <SectionTitle
             eyebrow="Zonas"
@@ -109,47 +291,6 @@ function Page() {
           </div>
         </div>
       </section>
-
-      {/* TIPOS */}
-      <section className="py-24 bg-sand/40">
-        <div className="container-luxe">
-          <SectionTitle
-            eyebrow="Qué encontrarás"
-            title="Todo tipo de propiedades"
-            subtitle="Desde apartamentos en la península hasta chacras en José Ignacio — tenemos acceso a toda la oferta del mercado."
-          />
-          <div className="mt-12 grid gap-0 sm:grid-cols-2 lg:grid-cols-4">
-            {tipos.map((tipo) => (
-              <div key={tipo} className="flex items-center gap-3 py-4 px-2 border-b border-border text-sm font-medium text-navy">
-                <span className="h-2 w-2 bg-gold flex-shrink-0" /> {tipo}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* BENEFICIOS */}
-      <section className="py-24 bg-background">
-        <div className="container-luxe">
-          <SectionTitle
-            eyebrow="Por qué elegirnos"
-            title="Comprá con confianza"
-            subtitle="Más de 20 propiedades gestionadas, superanfitriones en Airbnb y presencia en todas las zonas exclusivas."
-          />
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {beneficios.map((b) => (
-              <div key={b.title} className="flex gap-5">
-                <b.icon className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-navy">{b.title}</h3>
-                  <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{b.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-24 bg-navy text-white">
         <div className="container-luxe text-center max-w-3xl">
