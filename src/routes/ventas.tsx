@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle, Home, TrendingUp, ShieldCheck, Users, MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
+import { MessageCircle, Home, TrendingUp, ShieldCheck, Users, MapPin, ArrowRight } from "lucide-react";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { waLink } from "@/lib/site";
 import about from "@/assets/about-punta.jpg";
@@ -7,9 +7,9 @@ import about from "@/assets/about-punta.jpg";
 export const Route = createFileRoute("/ventas")({
   head: () => ({
     meta: [
-      { title: "Propiedades en Venta en Punta del Este — Génesis Propiedades" },
+      { title: "Propiedades en Venta en Punta del Este — Orígenes Propiedades" },
       { name: "description", content: "Comprá o vendé propiedades en Punta del Este, La Barra, José Ignacio y zonas exclusivas de Maldonado. Asesoramiento personalizado y conocimiento local." },
-      { property: "og:title", content: "Venta de Propiedades — Génesis Propiedades" },
+      { property: "og:title", content: "Venta de Propiedades — Orígenes Propiedades" },
       { property: "og:url", content: "/ventas" },
     ],
     links: [{ rel: "canonical", href: "/ventas" }],
@@ -26,19 +26,26 @@ const zonas = [
   { name: "Barrios privados", desc: "Pueblo Mío, Club de Mar y otros desarrollos con seguridad y amenities completos." },
 ];
 
-const tipos = [
-  "Apartamentos", "Casas", "Penthouses", "Chacras y estancias",
-  "Terrenos", "Locales comerciales", "Barrios privados", "Propiedades en primera línea"
-];
-
 const beneficios = [
   { icon: Home, title: "Cartera selectiva", text: "Accedé a propiedades curadas según tu perfil de inversión y necesidades." },
   { icon: TrendingUp, title: "Conocimiento del mercado", text: "Años de experiencia en la zona nos permiten asesorarte sobre precios reales y oportunidades únicas." },
   { icon: ShieldCheck, title: "Seguridad jurídica", text: "Te acompañamos en todo el proceso: oferta, promesa de compraventa, escritura y trámites." },
   { icon: Users, title: "Atención personalizada", text: "Un asesor dedicado durante todo el proceso, sin intermediarios innecesarios." },
   { icon: MapPin, title: "Conocemos cada zona", text: "Conocemos cada barrio, cada calle y cada propiedad en detalle — información que no encontrás en internet." },
-  { icon: CheckCircle2, title: "Propiedades off-market", text: "Acceso a propiedades que no se publican abiertamente, antes de que lleguen al mercado general." },
+  { icon: ShieldCheck, title: "Propiedades off-market", text: "Acceso a propiedades que no se publican abiertamente, antes de que lleguen al mercado general." },
 ];
+
+function NavyCard({ nombre, zona }: { nombre: string; zona: string }) {
+  return (
+    <div className="aspect-[4/3] bg-navy flex flex-col items-center justify-center gap-4 p-10">
+      <span className="inline-block hairline w-12" />
+      <p className="eyebrow !text-gold-soft text-center">Barrio privado</p>
+      <h3 className="font-display text-4xl text-white text-center leading-tight">{nombre}</h3>
+      <p className="text-white/50 text-xs uppercase tracking-[0.2em] text-center">{zona}</p>
+      <span className="inline-block hairline w-12" />
+    </div>
+  );
+}
 
 function Page() {
   return (
@@ -57,12 +64,7 @@ function Page() {
             Asesoramos a compradores e inversores en la adquisición de propiedades en las mejores zonas de Maldonado. Con años de experiencia local, te acompañamos en cada paso.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href={waLink("Hola, estoy buscando una propiedad para comprar en Punta del Este.")}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-gold"
-            >
+            <a href={waLink("Hola, estoy buscando una propiedad para comprar en Punta del Este.")} target="_blank" rel="noreferrer" className="btn-gold">
               <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
             </a>
             <Link to="/contacto" className="btn-outline-light">
@@ -84,22 +86,21 @@ function Page() {
           <div className="mt-16 space-y-24">
 
             {/* NATIVO */}
-            <div className="grid gap-12 lg:grid-cols-2 items-center">
-              <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="grid gap-0 lg:grid-cols-2 items-stretch">
+              <div className="relative overflow-hidden">
                 <img
                   src="https://nativojoseignacio.com.uy/images/assets/new_nativo_jose_ignacio.jpg"
                   alt="Barrio Nativo José Ignacio"
                   className="h-full w-full object-cover"
-                  width={1200} height={900}
+                  style={{ minHeight: "400px" }}
                 />
-                <div className="absolute inset-0 ring-1 ring-inset ring-gold/20" />
                 <span className="absolute top-4 left-4 bg-navy/90 backdrop-blur px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-gold font-semibold">José Ignacio</span>
               </div>
-              <div>
+              <div className="bg-sand/30 p-10 flex flex-col justify-center">
                 <p className="eyebrow">Barrio privado</p>
                 <h3 className="mt-2 font-display text-4xl text-navy">Barrio Nativo</h3>
                 <p className="mt-1 text-muted-foreground text-sm">José Ignacio · Maldonado</p>
-                <span className="mt-4 inline-block hairline" />
+                <span className="mt-5 inline-block hairline" />
                 <p className="mt-5 text-foreground/80 leading-relaxed">
                   Vivir en la naturaleza, a 3 minutos del pueblo más exclusivo del Uruguay. 124 hectáreas diseñadas para integrarse al entorno natural de José Ignacio, con lotes desde 4.000 m².
                 </p>
@@ -109,7 +110,7 @@ function Page() {
                     { num: "4.000 m²", label: "Lotes desde" },
                     { num: "3 min", label: "Del pueblo y la playa" },
                   ].map((s) => (
-                    <div key={s.label} className="border border-border p-3">
+                    <div key={s.label} className="border border-border bg-background p-3">
                       <div className="font-display text-xl text-navy">{s.num}</div>
                       <div className="text-[0.6rem] uppercase tracking-[0.15em] text-muted-foreground mt-1">{s.label}</div>
                     </div>
@@ -119,23 +120,15 @@ function Page() {
                   <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-3">Amenities</p>
                   <div className="flex flex-wrap gap-2">
                     {["Club house con piscina","Zona deportiva","Cerco perimetral","Seguridad permanente","Bosque nativo","Espejos de agua"].map((a) => (
-                      <span key={a} className="text-xs border border-border px-3 py-1 text-navy">{a}</span>
+                      <span key={a} className="text-xs border border-border px-3 py-1 text-navy bg-background">{a}</span>
                     ))}
                   </div>
                 </div>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a
-                    href={waLink("Hola Sofía, me interesa consultar por terrenos en Barrio Nativo, José Ignacio.")}
-                    target="_blank" rel="noreferrer"
-                    className="btn-gold"
-                  >
+                  <a href={waLink("Hola Sofía, me interesa consultar por terrenos en Barrio Nativo, José Ignacio.")} target="_blank" rel="noreferrer" className="btn-gold">
                     <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
                   </a>
-                  <a
-                    href="https://nativojoseignacio.com.uy"
-                    target="_blank" rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 border border-navy text-navy hover:bg-navy hover:text-white text-sm font-semibold uppercase tracking-[0.1em] transition-colors"
-                  >
+                  <a href="https://nativojoseignacio.com.uy" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 border border-navy text-navy hover:bg-navy hover:text-white text-sm font-semibold uppercase tracking-[0.1em] transition-colors">
                     Ver sitio oficial <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
@@ -145,14 +138,14 @@ function Page() {
             <div className="border-t border-border" />
 
             {/* PUEBLO MÍO GOLF */}
-            <div className="grid gap-12 lg:grid-cols-2 items-center">
-              <div className="order-last lg:order-first">
+            <div className="grid gap-0 lg:grid-cols-2 items-stretch">
+              <div className="bg-sand/30 p-10 flex flex-col justify-center order-last lg:order-first">
                 <p className="eyebrow">Barrio privado</p>
                 <h3 className="mt-2 font-display text-4xl text-navy">Pueblo Mío Golf</h3>
                 <p className="mt-1 text-muted-foreground text-sm">Manantiales · Maldonado</p>
-                <span className="mt-4 inline-block hairline" />
+                <span className="mt-5 inline-block hairline" />
                 <p className="mt-5 text-foreground/80 leading-relaxed">
-                  57 lotes únicos que abrazan la cancha del Club de Golf La Barra. Un barrio selecto con lotes desde 4.000 hasta 8.000 m², con vistas al golf, tajamares o campo abierto. A 3 km de La Barra y 6,5 km de Manantiales.
+                  57 lotes únicos que abrazan la cancha del Club de Golf La Barra. Lotes desde 4.000 hasta 8.000 m², con vistas al golf, tajamares o campo abierto. A 3 km de La Barra y 6,5 km de Manantiales.
                 </p>
                 <div className="mt-6 grid grid-cols-3 gap-3 text-center">
                   {[
@@ -160,7 +153,7 @@ function Page() {
                     { num: "8.000 m²", label: "Lotes hasta" },
                     { num: "3 km", label: "De La Barra" },
                   ].map((s) => (
-                    <div key={s.label} className="border border-border p-3">
+                    <div key={s.label} className="border border-border bg-background p-3">
                       <div className="font-display text-xl text-navy">{s.num}</div>
                       <div className="text-[0.6rem] uppercase tracking-[0.15em] text-muted-foreground mt-1">{s.label}</div>
                     </div>
@@ -170,45 +163,29 @@ function Page() {
                   <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-3">Amenities</p>
                   <div className="flex flex-wrap gap-2">
                     {["Seguridad 24hs","Calles asfaltadas","2 canchas de tenis","2 canchas de pádel","2 canchas de fútbol 5","Gimnasio","Salón de yoga"].map((a) => (
-                      <span key={a} className="text-xs border border-border px-3 py-1 text-navy">{a}</span>
+                      <span key={a} className="text-xs border border-border px-3 py-1 text-navy bg-background">{a}</span>
                     ))}
                   </div>
                 </div>
                 <div className="mt-8">
-                  <a
-                    href={waLink("Hola Sofía, me interesa consultar por terrenos en Pueblo Mío Golf, Manantiales.")}
-                    target="_blank" rel="noreferrer"
-                    className="btn-gold"
-                  >
+                  <a href={waLink("Hola Sofía, me interesa consultar por terrenos en Pueblo Mío Golf, Manantiales.")} target="_blank" rel="noreferrer" className="btn-gold">
                     <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
                   </a>
                 </div>
               </div>
-             <div className="relative aspect-[4/3] overflow-hidden order-first lg:order-last bg-navy flex flex-col items-center justify-center gap-4 p-10">
-  <div className="w-16 h-16 border border-gold/60 rounded-full flex items-center justify-center">
-    <span className="text-gold text-2xl">⛳</span>
-  </div>
-  <p className="eyebrow !text-gold-soft text-center">Barrio privado</p>
-  <h3 className="font-display text-3xl text-white text-center leading-tight">Pueblo Mío Golf</h3>
-  <p className="text-white/50 text-xs uppercase tracking-[0.2em] text-center">Manantiales · Maldonado</p>
-</div>
+              <NavyCard nombre="Pueblo Mío Golf" zona="Manantiales · Maldonado" />
+            </div>
 
             <div className="border-t border-border" />
 
             {/* PUEBLO MÍO */}
-            <div className="grid gap-12 lg:grid-cols-2 items-center">
-             <div className="relative aspect-[4/3] overflow-hidden bg-navy flex flex-col items-center justify-center gap-4 p-10">
-  <div className="w-16 h-16 border border-gold/60 rounded-full flex items-center justify-center">
-    <span className="text-gold text-2xl">🌊</span>
-  </div>
-  <p className="eyebrow !text-gold-soft text-center">Barrio privado</p>
-  <h3 className="font-display text-3xl text-white text-center leading-tight">Pueblo Mío</h3>
-  <p className="text-white/50 text-xs uppercase tracking-[0.2em] text-center">Manantiales · Maldonado</p>
-</div>
+            <div className="grid gap-0 lg:grid-cols-2 items-stretch">
+              <NavyCard nombre="Pueblo Mío" zona="Manantiales · Maldonado" />
+              <div className="bg-sand/30 p-10 flex flex-col justify-center">
                 <p className="eyebrow">Barrio privado</p>
                 <h3 className="mt-2 font-display text-4xl text-navy">Pueblo Mío</h3>
                 <p className="mt-1 text-muted-foreground text-sm">Manantiales · Maldonado</p>
-                <span className="mt-4 inline-block hairline" />
+                <span className="mt-5 inline-block hairline" />
                 <p className="mt-5 text-foreground/80 leading-relaxed">
                   El barrio privado más consolidado de la zona. 160 hectáreas con 180 lotes de 4.000 m² rodeados de 9 lagunas y 86 hectáreas de espacios comunes. A 5 minutos de Manantiales, equidistante entre Punta del Este y José Ignacio.
                 </p>
@@ -218,7 +195,7 @@ function Page() {
                     { num: "180", label: "Lotes" },
                     { num: "9", label: "Lagunas" },
                   ].map((s) => (
-                    <div key={s.label} className="border border-border p-3">
+                    <div key={s.label} className="border border-border bg-background p-3">
                       <div className="font-display text-xl text-navy">{s.num}</div>
                       <div className="text-[0.6rem] uppercase tracking-[0.15em] text-muted-foreground mt-1">{s.label}</div>
                     </div>
@@ -228,16 +205,12 @@ function Page() {
                   <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-3">Amenities</p>
                   <div className="flex flex-wrap gap-2">
                     {["Club house sobre la laguna","3 sectores de piscina","Beach house","Guardería náutica","Zona deportiva","Gimnasio","Kids Club","Guest house","Seguridad 24hs"].map((a) => (
-                      <span key={a} className="text-xs border border-border px-3 py-1 text-navy">{a}</span>
+                      <span key={a} className="text-xs border border-border px-3 py-1 text-navy bg-background">{a}</span>
                     ))}
                   </div>
                 </div>
                 <div className="mt-8">
-                  <a
-                    href={waLink("Hola Sofía, me interesa consultar por terrenos en Pueblo Mío, Manantiales.")}
-                    target="_blank" rel="noreferrer"
-                    className="btn-gold"
-                  >
+                  <a href={waLink("Hola Sofía, me interesa consultar por terrenos en Pueblo Mío, Manantiales.")} target="_blank" rel="noreferrer" className="btn-gold">
                     <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
                   </a>
                 </div>
@@ -267,6 +240,29 @@ function Page() {
           </div>
         </div>
       </section>
+
+      {/* BENEFICIOS */}
+      <section className="py-24 bg-background">
+        <div className="container-luxe">
+          <SectionTitle
+            eyebrow="Por qué elegirnos"
+            title="Comprá con confianza"
+            subtitle="Más de 10 años de experiencia y presencia en todas las zonas exclusivas de Maldonado."
+          />
+          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {beneficios.map((b) => (
+              <div key={b.title} className="flex gap-5">
+                <b.icon className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-navy">{b.title}</h3>
+                  <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{b.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 bg-navy text-white">
         <div className="container-luxe text-center max-w-3xl">
@@ -276,12 +272,7 @@ function Page() {
             Contanos qué estás buscando o qué propiedad querés vender. Te respondemos a la brevedad con opciones a tu medida y un seguimiento cercano.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <a
-              href={waLink("Hola, quiero hablar sobre compra o venta de una propiedad en Punta del Este.")}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-gold"
-            >
+            <a href={waLink("Hola, quiero hablar sobre compra o venta de una propiedad en Punta del Este.")} target="_blank" rel="noreferrer" className="btn-gold">
               <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
             </a>
             <Link to="/contacto" className="btn-outline-light">
