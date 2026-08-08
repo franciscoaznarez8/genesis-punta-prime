@@ -22,16 +22,7 @@ function Page() {
     <>
       {/* PRESENTACIÓN */}
       <section className="pt-36 pb-20 bg-background">
-        <div className="container-luxe grid gap-16 lg:grid-cols-2 items-center">
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <img
-              src="/sofia-familia.jpg"
-              alt="Sofía Algorta — Orígenes Propiedades"
-              className="h-full w-full object-cover object-top"
-              width={900} height={1125}
-            />
-            <div className="absolute inset-0 ring-1 ring-inset ring-gold/30" />
-          </div>
+        <div className="container-luxe max-w-3xl">
           <div>
             <p className="eyebrow">Sobre nosotros</p>
             <h1 className="mt-3 font-display text-5xl md:text-6xl text-navy leading-[1.05]">
