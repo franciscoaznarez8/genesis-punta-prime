@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle, Home, TrendingUp, ShieldCheck, Users, MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
+import { MessageCircle, Home, TrendingUp, ShieldCheck, Users, MapPin, ArrowRight } from "lucide-react";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { waLink } from "@/lib/site";
 import about from "@/assets/about-punta.jpg";
@@ -69,24 +69,6 @@ function Page() {
               Dejar mis datos <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* AVISO sin stock */}
-      <section className="py-10 bg-gold/10 border-y border-gold/30">
-        <div className="container-luxe flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-          <CheckCircle2 className="h-8 w-8 text-gold flex-shrink-0" />
-          <p className="text-navy font-medium leading-relaxed">
-            Actualmente estamos ampliando nuestra cartera de ventas. Si tenés una propiedad para vender o estás buscando comprar, <strong>contactanos directamente</strong> — trabajamos con propiedades exclusivas y off-market.
-          </p>
-          <a
-            href={waLink("Hola, me interesa vender o comprar una propiedad en Punta del Este.")}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-gold flex-shrink-0"
-          >
-            <MessageCircle className="h-4 w-4" /> Escribinos
-          </a>
         </div>
       </section>
 
