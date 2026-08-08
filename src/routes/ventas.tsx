@@ -184,33 +184,27 @@ function Page() {
                   </a>
                 </div>
               </div>
-              <div className="relative aspect-[4/3] overflow-hidden order-first lg:order-last">
-                <img
-                  src="https://a0.muscache.com/im/pictures/hosting/Hosting-1110330638772649350/original/63ada327-e509-4172-a5dd-98aa66ac9e2b.jpeg?im_w=1200"
-                  alt="Pueblo Mío Golf Manantiales"
-                  className="h-full w-full object-cover"
-                  width={1200} height={900}
-                />
-                <div className="absolute inset-0 ring-1 ring-inset ring-gold/20" />
-                <span className="absolute top-4 left-4 bg-navy/90 backdrop-blur px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-gold font-semibold">Manantiales</span>
-              </div>
-            </div>
+             <div className="relative aspect-[4/3] overflow-hidden order-first lg:order-last bg-navy flex flex-col items-center justify-center gap-4 p-10">
+  <div className="w-16 h-16 border border-gold/60 rounded-full flex items-center justify-center">
+    <span className="text-gold text-2xl">⛳</span>
+  </div>
+  <p className="eyebrow !text-gold-soft text-center">Barrio privado</p>
+  <h3 className="font-display text-3xl text-white text-center leading-tight">Pueblo Mío Golf</h3>
+  <p className="text-white/50 text-xs uppercase tracking-[0.2em] text-center">Manantiales · Maldonado</p>
+</div>
 
             <div className="border-t border-border" />
 
             {/* PUEBLO MÍO */}
             <div className="grid gap-12 lg:grid-cols-2 items-center">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img
-                  src="https://a0.muscache.com/im/pictures/hosting/Hosting-1650988006759702876/original/c5b8a74c-e3ac-4506-b2e6-11effc80f737.jpeg?im_w=1200"
-                  alt="Pueblo Mío Manantiales"
-                  className="h-full w-full object-cover"
-                  width={1200} height={900}
-                />
-                <div className="absolute inset-0 ring-1 ring-inset ring-gold/20" />
-                <span className="absolute top-4 left-4 bg-navy/90 backdrop-blur px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-gold font-semibold">Manantiales</span>
-              </div>
-              <div>
+             <div className="relative aspect-[4/3] overflow-hidden bg-navy flex flex-col items-center justify-center gap-4 p-10">
+  <div className="w-16 h-16 border border-gold/60 rounded-full flex items-center justify-center">
+    <span className="text-gold text-2xl">🌊</span>
+  </div>
+  <p className="eyebrow !text-gold-soft text-center">Barrio privado</p>
+  <h3 className="font-display text-3xl text-white text-center leading-tight">Pueblo Mío</h3>
+  <p className="text-white/50 text-xs uppercase tracking-[0.2em] text-center">Manantiales · Maldonado</p>
+</div>
                 <p className="eyebrow">Barrio privado</p>
                 <h3 className="mt-2 font-display text-4xl text-navy">Pueblo Mío</h3>
                 <p className="mt-1 text-muted-foreground text-sm">Manantiales · Maldonado</p>
