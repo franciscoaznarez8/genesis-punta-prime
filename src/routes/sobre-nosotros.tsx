@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ShieldCheck, MapPin, Star, Heart } from "lucide-react";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { waLink } from "@/lib/site";
+import familiaAsset from "@/assets/familia-origenes.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre-nosotros")({
   head: () => ({
@@ -46,7 +47,7 @@ function Page() {
             <p className="mt-4 text-foreground/80 leading-relaxed">
               Creo que el mejor negocio es el que le sirve a las dos partes. Por eso me tomo el tiempo de conocer a cada cliente, entender su situación y sus objetivos antes de recomendar nada. La confianza se construye así — no con promesas, sino con resultados que tienen sentido para quien los recibe.
             </p>
-            
+            <a
               href={waLink("Hola Sofía, me gustaría conocer más sobre Orígenes Propiedades.")}
               target="_blank"
               rel="noreferrer"
@@ -125,15 +126,20 @@ function Page() {
               </p>
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <img
-              src="https://a0.muscache.com/im/pictures/miso/Hosting-4525348/original/a980e24f-0f65-44cc-9c76-ed643868b072.jpeg?im_w=1200"
-              alt="Abadejo House — La Barra"
-              className="h-full w-full object-cover"
-              width={1280} height={1600}
-            />
-            <div className="absolute inset-0 ring-1 ring-inset ring-gold/30" />
-          </div>
+          <figure className="relative">
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <img
+                src={familiaAsset.url}
+                alt="Sofía Algorta junto a su familia en la costa de Maldonado, Uruguay"
+                className="h-full w-full object-cover"
+                width={1440} height={1800}
+              />
+              <div className="absolute inset-0 ring-1 ring-inset ring-gold/30" />
+            </div>
+            <figcaption className="mt-3 text-sm text-muted-foreground">
+              Sofía y su familia — Maldonado, Uruguay.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -144,7 +150,7 @@ function Page() {
           <p className="mt-6 text-white/75 leading-relaxed">
             Ya sea que estés buscando una propiedad para alquilar, querés comprar, vender, o necesitás que alguien gestione la tuya — hablemos. Sin compromiso, con toda la atención.
           </p>
-          
+          <a
             href={waLink("Hola Sofía, me gustaría hablar sobre propiedades en Punta del Este.")}
             target="_blank"
             rel="noreferrer"
