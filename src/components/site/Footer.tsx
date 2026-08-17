@@ -8,8 +8,8 @@ export function Footer() {
       <div className="container-luxe py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2 max-w-sm">
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-3xl text-white">Orígenes</span>
-            <span className="eyebrow !text-gold-soft">Propiedades</span>
+            <span className="font-display text-3xl text-white">Sofía Algorta</span>
+            <span className="eyebrow !text-gold-soft">Real Estate</span>
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
             Inmobiliaria y administración integral de propiedades en Punta del
@@ -53,7 +53,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-luxe py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/55">
-          <p>© {new Date().getFullYear()} Orígenes Propiedades. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Sofía Algorta Real Estate. Todos los derechos reservados.</p>
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
             <span>Hero: <a href="https://commons.wikimedia.org/wiki/File:Faro_de_Jos%C3%A9_Ignacio_a%C3%A9rea.jpg" target="_blank" rel="noreferrer" className="hover:text-gold">Jimmy Baikovicius</a> · CC BY-SA 2.0</span>
             <span>Servicios: <a href="https://commons.wikimedia.org/wiki/File:Desembocadora_Arroyo_Maldonado_-_Punte_de_la_Barra_210127-2193-jikatu.jpg" target="_blank" rel="noreferrer" className="hover:text-gold">Jimmy Baikovicius</a> · CC BY-SA 2.0</span>

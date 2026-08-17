@@ -11,9 +11,9 @@ import { waLink } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Orígenes Propiedades — Venta, alquiler y administración en Punta del Este" },
+      { title: "Sofía Algorta Real Estate — Venta, alquiler y administración en Punta del Este" },
       { name: "description", content: "Encontramos la propiedad ideal y cuidamos cada inversión como si fuera propia. Venta, alquiler y administración de propiedades en Punta del Este con atención personalizada." },
-      { property: "og:title", content: "Orígenes Propiedades — Punta del Este" },
+      { property: "og:title", content: "Sofía Algorta Real Estate — Punta del Este" },
       { property: "og:description", content: "Venta, alquiler y administración de propiedades en Punta del Este con atención personalizada y conocimiento local." },
       { property: "og:image", content: hero },
       { property: "og:url", content: "/" },
@@ -32,7 +32,7 @@ function Home() {
         <img src={hero} alt="Faro de José Ignacio, Maldonado, Uruguay" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/45 to-navy/80" />
         <div className="container-luxe relative z-10 py-32 md:py-40 text-white">
-          <p className="eyebrow !text-gold-soft animate-fade-up">Orígenes Propiedades · Punta del Este</p>
+          <p className="eyebrow !text-gold-soft animate-fade-up">Sofía Algorta Real Estate · Punta del Este</p>
           <h1 className="mt-5 font-display text-5xl md:text-7xl leading-[1.05] max-w-4xl animate-fade-up" style={{ animationDelay: "100ms" }}>
             Encontramos la propiedad ideal y cuidamos cada inversión como si fuera propia.
           </h1>
@@ -200,7 +200,7 @@ function Home() {
           <h2 className="mt-4 font-display text-4xl md:text-5xl">¿Listo para dar el siguiente paso?</h2>
           <p className="mt-6 text-white/75 leading-relaxed">Encontramos la propiedad ideal, gestionamos la tuya o te asesoramos en tu próxima inversión en Punta del Este.</p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <a href={waLink("Hola, quiero saber más sobre los servicios de Orígenes Propiedades.")} target="_blank" rel="noreferrer" className="btn-gold"><MessageCircle className="h-4 w-4" /> Escribinos</a>
+            <a href={waLink("Hola, quiero saber más sobre los servicios de Sofía Algorta Real Estate.")} target="_blank" rel="noreferrer" className="btn-gold"><MessageCircle className="h-4 w-4" /> Escribinos</a>
             <Link to="/propiedades" className="btn-outline-light">Ver propiedades <ArrowRight className="h-4 w-4" /></Link>
           </div>
         </div>

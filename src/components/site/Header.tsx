@@ -38,14 +38,14 @@ export function Header() {
               scrolled || open ? "text-navy" : "text-white"
             }`}
           >
-            Orígenes
+            Sofía Algorta
           </span>
           <span
             className={`text-[0.65rem] uppercase tracking-[0.3em] ${
               scrolled || open ? "text-gold" : "text-gold-soft"
             }`}
           >
-            Propiedades
+            Real Estate
           </span>
         </Link>
 

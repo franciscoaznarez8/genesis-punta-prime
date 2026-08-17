@@ -6,9 +6,9 @@ import { SITE, waLink } from "@/lib/site";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto — Orígenes Propiedades Punta del Este" },
+      { title: "Contacto — Sofía Algorta Real Estate Punta del Este" },
       { name: "description", content: "Contactanos por WhatsApp, email o Instagram. Atención personalizada para propietarios y huéspedes en Punta del Este." },
-      { property: "og:title", content: "Contacto — Orígenes Propiedades" },
+      { property: "og:title", content: "Contacto — Sofía Algorta Real Estate" },
       { property: "og:description", content: "Estamos a un mensaje de distancia." },
       { property: "og:url", content: "/contacto" },
     ],
@@ -61,7 +61,7 @@ function Page() {
               <Instagram className="h-6 w-6 text-gold mt-1" />
               <div>
                 <div className="eyebrow">Instagram</div>
-                <div className="mt-1 font-display text-xl text-navy">@origenespropiedades</div>
+                <div className="mt-1 font-display text-xl text-navy">@sofiaalgortarealestate</div>
               </div>
             </a>
             <div className="flex items-start gap-4 p-6 border border-border bg-card">

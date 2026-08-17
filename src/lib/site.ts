@@ -1,10 +1,10 @@
 export const SITE = {
-  name: "Orígenes Propiedades",
+  name: "Sofía Algorta Real Estate",
   tagline: "Inmobiliaria & Administración en Punta del Este",
   whatsappNumber: "59899601819",
   email: "sofialquila@gmail.com",
-  instagram: "https://instagram.com/origenespropiedades",
+  instagram: "https://instagram.com/sofiaalgortarealestate",
 };
 
-export const waLink = (msg = "Hola Orígenes Propiedades, me gustaría recibir más información.") =>
+export const waLink = (msg = "Hola Sofía Algorta Real Estate, me gustaría recibir más información.") =>
   `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(msg)}`;

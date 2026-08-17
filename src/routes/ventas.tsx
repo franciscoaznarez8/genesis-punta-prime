@@ -7,9 +7,9 @@ import about from "@/assets/about-punta.jpg";
 export const Route = createFileRoute("/ventas")({
   head: () => ({
     meta: [
-      { title: "Propiedades en Venta en Punta del Este — Orígenes Propiedades" },
+      { title: "Propiedades en Venta en Punta del Este — Sofía Algorta Real Estate" },
       { name: "description", content: "Comprá o vendé propiedades en Punta del Este, La Barra, José Ignacio y zonas exclusivas de Maldonado. Asesoramiento personalizado y conocimiento local." },
-      { property: "og:title", content: "Venta de Propiedades — Orígenes Propiedades" },
+      { property: "og:title", content: "Venta de Propiedades — Sofía Algorta Real Estate" },
       { property: "og:url", content: "/ventas" },
     ],
     links: [{ rel: "canonical", href: "/ventas" }],

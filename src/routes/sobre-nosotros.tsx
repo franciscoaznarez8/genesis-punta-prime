@@ -7,9 +7,9 @@ import familiaAsset from "@/assets/familia-origenes.jpg.asset.json";
 export const Route = createFileRoute("/sobre-nosotros")({
   head: () => ({
     meta: [
-      { title: "Sobre Nosotros — Orígenes Propiedades Punta del Este" },
-      { name: "description", content: "Sofía Algorta, uruguaya, fundadora de Orígenes Propiedades. Más de 10 años de experiencia en alquileres, ventas y administración de propiedades en Punta del Este." },
-      { property: "og:title", content: "Sobre Nosotros — Orígenes Propiedades" },
+      { title: "Sobre Nosotros — Sofía Algorta Real Estate Punta del Este" },
+      { name: "description", content: "Sofía Algorta, uruguaya, fundadora de Sofía Algorta Real Estate. Más de 10 años de experiencia en alquileres, ventas y administración de propiedades en Punta del Este." },
+      { property: "og:title", content: "Sobre Nosotros — Sofía Algorta Real Estate" },
       { property: "og:url", content: "/sobre-nosotros" },
     ],
     links: [{ rel: "canonical", href: "/sobre-nosotros" }],
@@ -30,7 +30,7 @@ function Page() {
             </h1>
             <span className="mt-6 inline-block hairline" />
             <p className="mt-6 text-foreground/80 leading-relaxed text-lg">
-              Soy Sofía Algorta, uruguaya, fundadora de Orígenes Propiedades. Crecí viniendo a estas playas desde chica — La Barra, Manantiales, José Ignacio — y hoy vivo acá. Esta zona no es solo mi lugar de trabajo, es mi casa.
+              Soy Sofía Algorta, uruguaya, fundadora de Sofía Algorta Real Estate. Crecí viniendo a estas playas desde chica — La Barra, Manantiales, José Ignacio — y hoy vivo acá. Esta zona no es solo mi lugar de trabajo, es mi casa.
             </p>
             <p className="mt-4 text-foreground/80 leading-relaxed">
               Llevo más de 10 años trabajando con propiedades en Punta del Este y la costa de Maldonado. Alquileres temporarios, ventas, administración y asesoramiento en construcción — acompañé a cientos de clientes en decisiones que importan de verdad. Y en todo ese tiempo aprendí una cosa: la diferencia está en escuchar antes de ofrecer.
@@ -39,7 +39,7 @@ function Page() {
               Creo que el mejor negocio es el que le sirve a las dos partes. Por eso me tomo el tiempo de conocer a cada cliente, entender su situación y sus objetivos antes de recomendar nada. La confianza se construye así — no con promesas, sino con resultados que tienen sentido para quien los recibe.
             </p>
             <a
-              href={waLink("Hola Sofía, me gustaría conocer más sobre Orígenes Propiedades.")}
+              href={waLink("Hola Sofía, me gustaría conocer más sobre Sofía Algorta Real Estate.")}
               target="_blank"
               rel="noreferrer"
               className="mt-8 inline-flex btn-gold"
@@ -113,7 +113,7 @@ function Page() {
                 Además, tengo algo que pocas personas en este rubro tienen: mi padre es arquitecto con décadas de trayectoria en la zona. Eso me dio desde chica un ojo diferente para las propiedades — entiendo la construcción, los materiales, el potencial de un terreno, lo que se puede hacer y lo que no. Si estás pensando en construir, reformar o evaluar una propiedad, ese conocimiento está disponible para vos también.
               </p>
               <p>
-                Orígenes nació de una convicción muy clara: que hay lugar para alguien que se tome el tiempo de entender qué es lo que cada persona realmente necesita. Ese es mi trabajo. Ese es mi diferencial.
+                Sofía Algorta Real Estate nació de una convicción muy clara: que hay lugar para alguien que se tome el tiempo de entender qué es lo que cada persona realmente necesita. Ese es mi trabajo. Ese es mi diferencial.
               </p>
             </div>
           </div>

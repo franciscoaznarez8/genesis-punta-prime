@@ -12,7 +12,7 @@ export const Route = createFileRoute("/propiedades/$slug")({
   },
   head: ({ loaderData }) => ({
     meta: loaderData ? [
-      { title: `${loaderData.property.name} — ${loaderData.property.zone} | Orígenes Propiedades` },
+      { title: `${loaderData.property.name} — ${loaderData.property.zone} | Sofía Algorta Real Estate` },
       { name: "description", content: loaderData.property.description },
       { property: "og:title", content: loaderData.property.name },
       { property: "og:description", content: loaderData.property.description },
