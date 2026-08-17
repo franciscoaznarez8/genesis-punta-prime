@@ -37,7 +37,7 @@ const beneficios = [
 
 function NavyCard({ nombre, zona }: { nombre: string; zona: string }) {
   return (
-    <div className="aspect-[4/3] bg-navy flex flex-col items-center justify-center gap-4 p-10">
+    <div className="h-full min-h-[400px] bg-navy flex flex-col items-center justify-center gap-4 p-10">
       <span className="inline-block hairline w-12" />
       <p className="eyebrow !text-gold-soft text-center">Barrio privado</p>
       <h3 className="font-display text-4xl text-white text-center leading-tight">{nombre}</h3>
