@@ -6,9 +6,9 @@ import { waLink } from "@/lib/site";
 export const Route = createFileRoute("/concierge")({
   head: () => ({
     meta: [
-      { title: "Servicios Concierge en Punta del Este — Orígenes Propiedades" },
+      { title: "Servicios Concierge en Punta del Este — Sofía Algorta Real Estate" },
       { name: "description", content: "Servicios personalizados de concierge: traslados, compras, mantenimiento, jardinería, piscinas y atención dedicada para propietarios y huéspedes." },
-      { property: "og:title", content: "Servicios Concierge — Orígenes Propiedades" },
+      { property: "og:title", content: "Servicios Concierge — Sofía Algorta Real Estate" },
       { property: "og:description", content: "Atención personalizada y servicios premium en Punta del Este." },
       { property: "og:url", content: "/concierge" },
     ],
