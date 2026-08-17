@@ -8,8 +8,8 @@ export function Footer() {
       <div className="container-luxe py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2 max-w-sm">
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-3xl text-white">Orígenes</span>
-            <span className="eyebrow !text-gold-soft">Propiedades</span>
+            <span className="font-display text-3xl text-white">Sofía Algorta</span>
+            <span className="eyebrow !text-gold-soft">Real Estate</span>
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
             Inmobiliaria y administración integral de propiedades en Punta del

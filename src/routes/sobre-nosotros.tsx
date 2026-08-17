@@ -113,7 +113,7 @@ function Page() {
                 Además, tengo algo que pocas personas en este rubro tienen: mi padre es arquitecto con décadas de trayectoria en la zona. Eso me dio desde chica un ojo diferente para las propiedades — entiendo la construcción, los materiales, el potencial de un terreno, lo que se puede hacer y lo que no. Si estás pensando en construir, reformar o evaluar una propiedad, ese conocimiento está disponible para vos también.
               </p>
               <p>
-                Orígenes nació de una convicción muy clara: que hay lugar para alguien que se tome el tiempo de entender qué es lo que cada persona realmente necesita. Ese es mi trabajo. Ese es mi diferencial.
+                Sofía Algorta Real Estate nació de una convicción muy clara: que hay lugar para alguien que se tome el tiempo de entender qué es lo que cada persona realmente necesita. Ese es mi trabajo. Ese es mi diferencial.
               </p>
             </div>
           </div>
